@@ -1,0 +1,544 @@
+<!DOCTYPE html>
+<meta charset="utf-8" />
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap');
+    @font-face {
+        font-family: "My font";
+    }
+
+    *{
+        font-family: 'Noto Sans KR', sans-serif;
+        margin: 0;
+        padding: 0;
+        text-decoration: none;
+    }
+
+    .form-select {
+        overflow: scroll;
+    }
+
+    h2 {
+        text-align: center;
+        margin: 15px;
+        padding-bottom: 10px;
+    }
+
+    body {
+        min-height: 100vh;
+        background: linear-gradient(#DAE9E7, #fff);
+    }
+
+    .grid {
+        display: grid;
+        grid-template-columns: 130px 1fr;
+    }
+
+    div {
+        margin: 5px;
+    }
+
+    input,select {
+        font-size: 12px;
+        vertical-align: middle;
+        width: 185px;
+        margin-right: 5px;
+    }
+
+    input.idForm {
+        font-size: 12px;
+        vertical-align: middle;
+        width: 120px;
+        margin-right: 5px;
+    }
+
+    input.radio-control {
+        width: 20px;
+    }
+
+    label.radio-control {
+        font-size: 15px;
+    }
+
+    button {
+        float: right;
+        margin-top: 4px;
+        width: 80px;
+        height: 25px;
+        background: linear-gradient(125deg,#E6F0EF,#A9C5B9,#C5DCD5);
+        background-position: left;
+        background-size: 200%;
+        color:white;
+        text-shadow: 1px 1px 1px #000;
+        font-weight: bold;
+        border:none;
+        cursor:pointer;
+        transition: 0.4s;
+        display:inline;
+    }
+
+    button:hover {
+        background-position: right;
+    }
+
+    button.id_overlap_check {
+        width: 51px;
+        height: 20px;
+        background: linear-gradient(125deg,#E6F0EF,#A9C5B9,#C5DCD5);
+        background-position: left;
+        background-size: 200%;
+        color:white;
+        text-shadow: 1px 1px 1px #000;
+        border:none;
+        cursor:pointer;
+        transition: 0.4s;
+        display:inline;
+        font-size: 12px;
+    }
+
+    .input-form {
+        max-width: 330px;
+        margin: 30px auto;
+        padding: 15px;
+        background: #FAF8F2;
+        -webkit-border-radius: 15px;
+        -moz-border-radius: 15px;
+        border-radius: 15px;
+        -webkit-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+        -moz-box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+        box-shadow: 0 8px 20px 0 rgba(0, 0, 0, 0.15);
+    }
+
+    .main_title {
+        font-size: 40px;
+        text-align: center;
+        text-shadow: 1px 1px 1px #000;
+        margin-top: 30px;
+        margin-bottom: 0;
+        color: white;
+    }
+
+    @media screen and (max-width: 980px) {
+        input, select {
+            font-size: 12px;
+            vertical-align: middle;
+            width: 20vmax;
+            margin-right: 5px;
+        }
+        input.idForm {
+            font-size: 12px;
+            vertical-align: middle;
+            width: 12vmax;
+            margin-right: 5px;
+        }
+    }
+</style>
+
+<script>
+    //joinform_check 함수로 유효성 검사
+
+    // id 중복확인 여부를 위한 변수 선언
+    let idck = 0;
+
+    function SelectMajor(e) {
+        document.getElementById('major').value = e.value;
+    }
+
+    function SelectGrade(e) {
+        document.getElementById('grade').value = e.value;
+    }
+
+    function id_overlap_check(){
+        let inputId = document.getElementById("id");
+
+        if (inputId.value === "") { //해당 입력값이 없을 경우 같은말: if(!mid.value)
+            alert("아이디를 입력해주세요.");
+            inputId.focus(); //focus(): 커서가 깜빡이는 현상, blur(): 커서가 사라지는 현상
+            return false; //return: 반환하다 return false:  아무것도 반환하지 말아라 아래 코드부터 아무것도 진행하지 말것
+        }
+
+        let idCheck = /^[a-zA-z0-9]{4,12}$/; //아이디 유효성 검사
+
+        if (!idCheck.test(inputId.value)) {
+            alert("아이디는 영문 대소문자와 숫자 4~12자리로 입력해야 합니다");
+            inputId.value = "";
+            inputId.focus();
+            return false;
+        }
+
+        $.ajax({
+            type: 'GET',
+            url: `/api/IdOverlapCheck/${inputId.value}`,
+            contentType: "String",
+            success: function (response){
+                if(response === false){
+                    alert("사용 가능한 ID 입니다.")
+                    idck = 1;
+                    return false;
+                }
+                else{
+                    alert("입력한 ID가 이미 사용중입니다.")
+                    idck = 0;
+                    inputId.value = "";
+                    inputId.focus();
+                    return false;
+                }
+            }
+        })
+    }
+
+    function successSignUp() {
+        let id = $(`#id`).val();
+        let major = $(`#major`).val();
+        let username = $(`#username`).val();
+        let password = $(`#password`).val();
+        let grade = $(`#grade`).val();
+        let sex = $(`input[name = sex ]:checked`).val();
+        let phoneNumber = $(`#phoneNumber`).val();
+        let email = $(`#email`).val();
+        let checkLogin = "N";
+
+        let data = {
+            'id': id,
+            'major': major,
+            'username': username,
+            'password': password,
+            'grade': grade,
+            'sex': sex,
+            'phoneNumber': phoneNumber,
+            'email': email,
+            'checkLogin' : checkLogin
+        };
+
+        $.ajax({
+            type: "POST",
+            url: "/api/signup",
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            success: function () {
+                console.log("회원가입 완료")
+                alert("회원가입이 성공적으로 완료되었습니다.");
+                moveLoginPage();
+            },
+            error: function () {
+                console.log("회원가입에 실패하였습니다.")
+            }
+        })
+    }
+
+    function joinform_check() {
+        //변수에 담아주기
+        let id = document.getElementById("id");
+        let password = document.getElementById("password");
+        let confirm_password = document.getElementById("confirm_password");
+        let username = document.getElementById("username");
+        let male = document.getElementById("male");
+        let female = document.getElementById("female");
+        let major = document.getElementById("major");
+        let grade = document.getElementById("grade");
+        let phoneNumber = document.getElementById("phoneNumber");
+        let email = document.getElementById("email");
+        let idOverlapCheck = idck;
+
+        if (id.value === "") { //해당 입력값이 없을 경우 같은말: if(!mid.value)
+            alert("아이디를 입력해주세요.");
+            id.focus(); //focus(): 커서가 깜빡이는 현상, blur(): 커서가 사라지는 현상
+            return false; //return: 반환하다 return false:  아무것도 반환하지 말아라 아래 코드부터 아무것도 진행하지 말것
+        }
+
+        let idCheck = /^[a-zA-z0-9]{4,12}$/; //아이디 유효성 검사
+
+        if (!idCheck.test(id.value)) {
+            alert("아이디는 영문 대소문자와 숫자 4~12자리로 입력해야 합니다");
+            id.value = "";
+            id.focus();
+            return false;
+        }
+
+        if (password.value === "") {
+            alert("비밀번호를 입력해주세요.");
+            password.focus();
+            return false;
+        }
+
+        //비밀번호 영문자+숫자+특수조합(8~25자리 입력) 정규식
+        let pwdCheck = /^(?=.*[a-zA-Z])(?=.*[!@#$%^*+=-])(?=.*[0-9]).{8,25}$/;
+
+        if (!pwdCheck.test(password.value)) {
+            alert("비밀번호는 영문자+숫자+특수문자 조합으로 8~25자리 사용해야 합니다.");
+            password.value = "";
+            password.focus();
+            return false;
+        }
+
+        if (confirm_password.value !== password.value) {
+            alert("비밀번호가 일치하지 않습니다.");
+            confirm_password.focus();
+            return false;
+        }
+
+        if (username.value === "") {
+            alert("이름을 입력해주세요.");
+            username.focus();
+            return false;
+        }
+
+        if (!female.checked && !male.checked) { //둘다 미체크시
+            alert("성별을 선택해주세요.");
+            return false;
+        }
+
+        if (phoneNumber.value === "") {
+            alert("전화번호를 입력해주세요.");
+            phoneNumber.focus();
+            return false;
+        }
+
+        let class_phoneNumber_Check = /^(?=.*[0-9]).{10,11}$/;
+
+        if (!class_phoneNumber_Check.test(phoneNumber.value)) {
+            alert("전화번호는 10자리 또는 11자리 숫자로 입력해주세요.");
+            phoneNumber.value = "";
+            phoneNumber.focus();
+            return false;
+        }
+
+        if (email.value === "") {
+            alert("이메일을 입력해주세요.");
+            email.focus();
+            return false;
+        }
+
+        let emailCheck = /^([0-9a-zA-Z_.-]+)@([0-9a-zA-Z_-]+)(\.[0-9a-zA-Z_-]+){1,2}$/;
+
+        if (!emailCheck.test(email.value)) {
+            alert("이메일이 유효하지 않습니다.");
+            email.value = "";
+            email.focus();
+            return false;
+        }
+
+        if (major.value === "") {
+            alert("학과를 선택해주세요.");
+            major.focus();
+            return false;
+        }
+
+        if (grade.value === "") {
+            alert("학년을 선택해주세요.");
+            grade.focus();
+            return false;
+        }
+
+        if (idOverlapCheck === 0) {
+            alert("아이디 중복확인을 해주세요.");
+            id.focus();
+            return false;
+        }
+
+        //입력 값 전송
+        successSignUp();
+    }
+
+    function moveMainPage() {
+        location.href = "/home";
+        return false;
+    }
+
+    function moveLoginPage() {
+        location.href = "login.html";
+        return false;
+    }
+
+</script>
+
+<link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap" rel="stylesheet">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+<h1 class="main_title" onclick="moveMainPage()">INHA STUDY</h1>
+
+
+<div class="input-form">
+    <h2>가입자 정보 기입</h2>
+    <form>
+        <div class="grid">
+            <div>
+                <label for="id">아이디</label>
+            </div>
+            <div>
+                <input type="text" class="idForm" maxlength="12" minlength="4" id="id" name="id"
+                       placeholder="&nbsp;아이디를 입력해주세요.">
+                <button type="button" class="id_overlap_check" onclick="id_overlap_check()"> 중복확인</button>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <label for="password">비밀번호</label>
+            </div>
+            <div>
+                <input type="password" maxlength="25" minlength="8" id="password"
+                       name="password" placeholder="&nbsp;비밀번호를 입력해주세요.">
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <label for="confirm_password">비밀번호 재확인</label>
+            </div>
+            <div>
+                <input type="password" id="confirm_password" name="confirm_password"
+                       placeholder="&nbsp;비밀번호를 다시 입력해주세요.">
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <label for="username">이름</label>
+            </div>
+            <div>
+                <input type="text" id="username" name="username"
+                       placeholder="&nbsp;이름을 입력해주세요.">
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <label>성별</label>
+            </div>
+            <div>
+                <input type="radio" class="radio-control" id="male" name="sex" value="male"><label
+                    class='radio-control' for="male">남성 &nbsp;</label>
+                <input type="radio" class="radio-control" id="female" name="sex" value="female"><label
+                    class='radio-control' for="female">여성</label>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <label for="phoneNumber">전화번호</label>
+            </div>
+            <div>
+                <input type="text" maxlength="11" minlength="10" id="phoneNumber"
+                       name="phoneNumber" placeholder="&nbsp;숫자만 입력해주세요.">
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <label for="email">이메일</label>
+            </div>
+            <div>
+                <input type="text" id="email" name="email"
+                       placeholder="&nbsp;예시 : abcd@naver.com">
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <label for="major">학과</label>
+            </div>
+            <div>
+                <input type="text" id="major" name="major" placeholder="학과" value="" hidden>
+                <select size="1" class="form-select" aria-label="Default select example"
+                        onchange="SelectMajor(this)">
+                    <option selected hidden>학과를 선택해주세요.</option>
+                    <option value="간호학과">간호학과</option>
+                    <option value="건축공학과">건축공학과</option>
+                    <option value="건축과">건축과</option>
+                    <option value="경영학과">경영학과</option>
+                    <option value="경제학과">경제학과</option>
+                    <option value="고분자공학과">고분자공학과</option>
+                    <option value="공간정보공학과">공간정보공학과</option>
+                    <option value="교육학과">교육학과</option>
+                    <option value="국어교육과">국어교육과</option>
+                    <option value="국제통상학과">국제통상학과</option>
+                    <option value="글로벌금융학과">글로벌금융학과</option>
+                    <option value="금융투자학과">금융투자학과</option>
+                    <option value="기계공학과">기계공학과</option>
+                    <option value="데이터사이언스학과">데이터사이언스학과</option>
+                    <option value="디자인융합학과">디자인융합학과</option>
+                    <option value="디자인테크놀로지학과">디자인테크놀로지학과</option>
+                    <option value="메카트로닉스공학과">메카트로닉스공학과</option>
+                    <option value="문화콘텐츠문화경영학과">문화콘텐츠문화경영학과</option>
+                    <option value="물리학과">물리학과</option>
+                    <option value="미디어커뮤니케이션학과">미디어커뮤니케이션학과</option>
+                    <option value="사학과">사학과</option>
+                    <option value="사회교육과">사회교육과</option>
+                    <option value="사회복지학과">사회복지학과</option>
+                    <option value="사회인프라공학과">사회인프라공학과</option>
+                    <option value="산업경영공학과">산업경영공학과</option>
+                    <option value="생명공학과">생명공학과</option>
+                    <option value="생명과학과">생명과학과</option>
+                    <option value="소비자학과">소비자학과</option>
+                    <option value="소프트웨어융합공학과">소프트웨어융합공학과</option>
+                    <option value="수학과">수학과</option>
+                    <option value="수학교육과">수학교육과</option>
+                    <option value="스마트모빌리티공학과">스마트모빌리티공학과</option>
+                    <option value="스포츠과학과">스포츠과학과</option>
+                    <option value="식품영양학과">식품영양학과</option>
+                    <option value="신소재공학과">신소재공학과</option>
+                    <option value="아동심리학과">아동심리학과</option>
+                    <option value="아태물류학부">아태물류학부</option>
+                    <option value="에너지자원공학과">에너지자원공학과</option>
+                    <option value="연극영화학과">연극영화학과</option>
+                    <option value="영어교육과">영어교육과</option>
+                    <option value="영어영문학과">영어영문학과</option>
+                    <option value="의류디자인학과">의류디자인학과</option>
+                    <option value="의예과">의예과</option>
+                    <option value="의학과">의학과</option>
+                    <option value="인공지능공학과">인공지능공학과</option>
+                    <option value="일본언어문화학과">일본언어문화학과</option>
+                    <option value="전기공학과">전기공학과</option>
+                    <option value="전자공학과">전자공학과</option>
+                    <option value="정보통신공학과">정보통신공학과</option>
+                    <option value="정치외교학과">정치외교학과</option>
+                    <option value="조선해양공학과">조선해양공학과</option>
+                    <option value="조형예술학과">조형예술학과</option>
+                    <option value="중국학과">중국학과</option>
+                    <option value="철학과">철학과</option>
+                    <option value="체육교육과">체육교육과</option>
+                    <option value="컴퓨터공학과">컴퓨터공학과</option>
+                    <option value="통계학과">통계학과</option>
+                    <option value="프랑스언어문화학과">프랑스언어문화학과</option>
+                    <option value="한국어문학과">한국어문학과</option>
+                    <option value="항공우주공학과">항공우주공학과</option>
+                    <option value="해양과학과">해양과학과</option>
+                    <option value="행정학과">행정학과</option>
+                    <option value="화학공학과">화학공학과</option>
+                    <option value="화학과">화학과</option>
+                    <option value="환경공학과">환경공학과</option>
+                    <option value="IBT학과">IBT학과</option>
+                    <option value="ISE학과">ISE학과</option>
+                    <option value="KLC학과">KLC학과</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <label for="grade">학년</label>
+            </div>
+            <div>
+                <input type="text" id="grade" name="grade" placeholder="학년" value="" required
+                       hidden>
+                <select class="form-select" aria-label="Default select example" onchange="SelectGrade(this)">
+                    <option selected hidden>학년을 선택해주세요.</option>
+                    <option value=1>1학년</option>
+                    <option value=2>2학년</option>
+                    <option value=3>3학년</option>
+                    <option value=4>4학년</option>
+                </select>
+            </div>
+        </div>
+        <br/>
+        <hr class="mb-4">
+        <div class="mb-4"></div>
+
+        <button type="button" onclick="joinform_check()">
+            회원가입
+        </button>
+        <br/>
+
+    </form>
+</div>
