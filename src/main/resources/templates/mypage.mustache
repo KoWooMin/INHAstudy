@@ -77,11 +77,9 @@
         font-size: 16px;
         font-family: 'Noto Sans KR', sans-serif;
     }
-
     hr.mb-4 {
         height: 2px;
     }
-
     .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
         margin-left: 0px;
         border-top-left-radius: 0;
@@ -106,9 +104,7 @@
             <a href="/" class="logo">
                 <span class="title">INHA Study</span>
             </a>
-            <form class="formLogin" action="/" method="GET">
-                <button class="btn btn-sm">Logout</button>
-            </form>
+            <button class="btn btn-sm" onclick=switchCheckLogin(localStorage.getItem("localId"))>Logout</button>
         </div>
     </header>
 
@@ -116,7 +112,7 @@
     <div id="main" style="margin-top: 70px;">
         <div class="inner">
             <header>
-                <h1> --- 님,&nbsp 환영합니다.
+                <h1><span id="userName"></span> 님,&nbsp 환영합니다.
                 </h1>
             </header>
             <hr class="mb-4">
@@ -125,7 +121,7 @@
                 <br>
                 <h3> 내가 속한 스터디룸 </h3>
             </div>
-
+            <input type="text" id="userId" value="null"/>
 
         </div>
     </div>
@@ -133,6 +129,34 @@
 </div>
 }
 
+<script>
+    function switchCheckLogin(inputId) {
+        $.ajax({
+            type: 'PUT',
+            url: `/api/switchCheckLogin/${inputId}`,
+            success: function (response){
+            }
+        })
+        localStorage.setItem("localId",null);
+        location.href = "/";
+        return false;
+    }
+    window.onload=function (){
+        userId();
+    }
+    function userId(){
+        document.getElementById("userId").value=localStorage.getItem('localId');
+        $.ajax({
+            type: "GET",
+            url: `api/getUserName/${localStorage.getItem('localId')}`,
+            contentType: "String",
+            success: function (response){
+                let username=response;
+                document.getElementById("userName").innerHTML=username;
+            }
+        })
+    }
+</script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/assets/js/jquery.min.js"></script>
 <script src="/assets/js/browser.min.js"></script>

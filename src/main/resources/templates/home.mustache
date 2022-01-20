@@ -17,54 +17,44 @@
             font-family: 'Noto Sans KR', sans-serif;
             margin: auto;
         }
-
         .createRoomModal_text2 {
             font-size: 25px;
             color: #fff;
             font-family: 'Noto Sans KR', sans-serif;
             margin-bottom: -25px;
         }
-
         .createRoomModal_text3 {
             font-size: 20px;
             color: #fff;
             font-family: 'Noto Sans KR', sans-serif;
         }
-
         .createRoomModal_text4 {
             width: 26px;
             font-size: 20px;
             color: #fff;
             font-family: 'Noto Sans KR', sans-serif;
         }
-
         .createRoomModal_background {
             background: #7f9dff;
         }
-
         .check_margin {
             margin-bottom: 15px;
         }
-
         .modal-content {
             overflow-y: initial !important;
             border: 2px solid white;
             border-radius: 20px;
         }
-
         .modal-body {
             height: 600px;
             overflow-y: auto;
         }
-
         .row {
             margin-bottom: 20px;
         }
-
         .color1 {
             background: brown;
         }
-
         .studyPlanModal_text1{
             font-size: 30px;
             color: black;
@@ -89,14 +79,12 @@
             color: black;
             font-family: 'Noto Sans KR', sans-serif;
             margin-top: 20px;
-
         }
         .studyPlanModal_background{
             background: #fff;
         }
     </style>
 </head>
-
 <body class="is-preload">
 <style>
     .btn-secondary.disabled, .btn-secondary:disabled {
@@ -379,31 +367,11 @@
 
                         </a>
                     </article>
+                    <input type="text" id="roomId{{id}}" value="{{id}}"/>
                 {{/roomList}}
             </section>
 
-            <section class="tiles" style="margin-top: 0px;">
-                {{#room}}
-                    <article class="style{{category}}스터디">
-                                        <span class="image">
-                                            <img src="/images/pic02.jpg" alt="" />
-                                        </span>
-                        <a href="../generic.html">
 
-                            <h2>{{roomTitle}}</h2>
-                            <div class="content">
-                                <p>
-                                    <br>: {{info}}
-                                    <br>> {{location}}
-                                    <br>> {{activeType}}
-                                    <br>( {{curJoin}}/{{maxJoin}} )
-                                </p>
-                            </div>
-
-                        </a>
-                    </article>
-                {{/room}}
-            </section>
             {{#roomList}}
                 <div class="modal fade" id="studyPlan{{id}}" tabindex="-1" aria-labelledby="studyPlanLabel" aria-hidden="true"
                      data-bs-backdrop="static" data-bs-keyboard="false">
@@ -468,9 +436,7 @@
 
 <!-- Scripts -->
 <script>
-
     let checkLogin;
-
     function checkLoginCreateRoom(){
         if(checkLogin==='Y') {
             $(`#makeRoom`).modal('show');
@@ -481,20 +447,14 @@
             alert("오류!");
         }
     }
-
     function checkLoginJoin(){
         if (checkLogin === 'Y') {
             location.href="/memo.html"
-        }else if(checkLogin === 'N'){
-            alert("로그인 후 이용해주세요");
-            location.href = "/login.html"
-        }
-        else{
+        }else {
             alert("로그인 후 이용해주세요");
             location.href = "/login.html"
         }
     }
-
     function maxPeople(el, max) {
         if (el.value > max) {
             alert("최대 인원 수는 100명입니다.");
@@ -546,15 +506,12 @@
             }
         })
     }
-
     window.onload=function (){
         localId();
     }
-
     function localId(){
         if(localStorage.getItem('localId')){
             document.getElementById("localId").value = localStorage.getItem('localId');
-
             $.ajax({
                 type: 'GET',
                 url: `/api/getCheckLogin/${localStorage.getItem('localId')}`,
@@ -585,7 +542,6 @@
             })
         }
     }
-
     function switchCheckLogin(inputId) {
         $.ajax({
             type: 'PUT',
@@ -597,8 +553,6 @@
         location.href = "/";
         return false;
     }
-
-
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/assets/js/jquery.min.js"></script>
