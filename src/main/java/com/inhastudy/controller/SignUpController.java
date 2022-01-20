@@ -58,6 +58,11 @@ public class SignUpController {
         return signupRepository.findSignUpById(inputId).getCheckLogin();
     }
 
+    @GetMapping("/api/getUserName/{inputId}")
+    public String getUserName(@PathVariable String inputId){
+        return signupRepository.findSignUpById(inputId).getUsername();
+    }
+
     @PutMapping("/api/acceptlogin/{inputId}") // 로그인한 사용자 checkLogin을 Y로 변경
     public void acceptLogin(@PathVariable String inputId){
         SignUp signUp = signupRepository.findSignUpById(inputId);
