@@ -196,6 +196,7 @@
         let phoneNumber = $(`#phoneNumber`).val();
         let email = $(`#email`).val();
         let checkLogin = "N";
+        let ssn = $(`#ssn`).val();
 
         let data = {
             'id': id,
@@ -206,7 +207,8 @@
             'sex': sex,
             'phoneNumber': phoneNumber,
             'email': email,
-            'checkLogin' : checkLogin
+            'checkLogin' : checkLogin,
+            'ssn' : ssn
         };
 
         $.ajax({
@@ -237,7 +239,9 @@
         let grade = document.getElementById("grade");
         let phoneNumber = document.getElementById("phoneNumber");
         let email = document.getElementById("email");
+        let ssn = document.getElementById("ssn");
         let idOverlapCheck = idck;
+
 
         if (id.value === "") { //해당 입력값이 없을 경우 같은말: if(!mid.value)
             alert("아이디를 입력해주세요.");
@@ -317,6 +321,21 @@
             return false;
         }
 
+        if (ssn.value === "") {
+            alert("학번을 입력해주세요.");
+            ssn.focus();
+            return false;
+        }
+
+        let class_ssn_Check = /^(?=.*[0-9]).{8}$/;
+
+        if (!class_ssn_Check.test(ssn.value)) {
+            alert("학번을 8자리 숫자로 입력해주세요.");
+            ssn.value = "";
+            ssn.focus();
+            return false;
+        }
+
         if (major.value === "") {
             alert("학과를 선택해주세요.");
             major.focus();
@@ -340,7 +359,7 @@
     }
 
     function moveMainPage() {
-        location.href = "/home";
+        location.href = "/";
         return false;
     }
 
@@ -431,6 +450,16 @@
             <div>
                 <input type="text" id="email" name="email"
                        placeholder="&nbsp;예시 : abcd@naver.com">
+            </div>
+        </div>
+
+        <div class="grid">
+            <div>
+                <label for="ssn">학번</label>
+            </div>
+            <div>
+                <input type="text" maxlength="8" minlength="8" class="form-control" id="ssn" name="ssn"
+                       placeholder="&nbsp;학번을 입력해주세요.">
             </div>
         </div>
 

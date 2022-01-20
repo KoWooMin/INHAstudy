@@ -1,7 +1,7 @@
 <!DOCTYPE HTML>
 <html>
 <head>
-    <title>Phantom by HTML5 UP</title>
+    <title>INHA STUDY</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
 
@@ -98,407 +98,416 @@
 </head>
 
 <body class="is-preload">
-    <style>
-        .btn-secondary.disabled, .btn-secondary:disabled {
-            color: black;
-            background-color: white;
-            border-color: black;
-            font-family: 'Noto Sans KR', sans-serif;
-            margin-bottom: 10px;
-            padding-bottom: 2px;
-            padding-top: 2px;
-            padding-right: 8px;
-            padding-left: 8px;
-        }
-        .input-group {
-            position: relative;
-            display: flex;
-            flex-wrap: wrap;
-            align-items: stretch;
-            width: 100%;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        .btn-sm {
-            color: white;
-            background-color: #339af0;
-            border-color: white;
-            position: relative;
-            border-radius: 4px;
-            box-shadow: none;
-            font-size: 16px;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        .btn-outline-secondary {
-            color: black;
-            border-color: black;
-        }
-        .btn-outline-primary {
-            border-bottom-width: 0px;
-            border-right-width: 0px;
-            border-top-width: 0px;
-            border-left-width: 0px;
-            color: black;
-            float: right;
-            font-size: 16px;
-            font-family: 'Noto Sans KR', sans-serif;
-        }
-        .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
-            margin-left: 0px;
-            border-top-left-radius: 0;
-            border-bottom-left-radius: 0;
-            color: black;
-            text-align: right;
-            padding: 10px;
-            font-size: 20px;
-            font-family: 'Noto Sans KR';
-        }
-    </style>
+<style>
+    .btn-secondary.disabled, .btn-secondary:disabled {
+        color: black;
+        background-color: white;
+        border-color: black;
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-bottom: 10px;
+        padding-bottom: 2px;
+        padding-top: 2px;
+        padding-right: 8px;
+        padding-left: 8px;
+    }
+    .input-group {
+        position: relative;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: stretch;
+        width: 100%;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .btn-sm {
+        margin-top: 70px;
+        width: 76px;
+        float: right;
+        color: white;
+        background-color: #339af0;
+        border-color: white;
+        border-radius: 4px;
+        box-shadow: none;
+        font-size: 10px;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    form.formLogin {
+        margin: 0;
+        padding: 0;
+        float: right;
+        width: fit-content;
+    }
+    .btn-outline-secondary {
+        color: black;
+        border-color: black;
+    }
+    .btn-outline-primary {
+        border-bottom-width: 0px;
+        border-right-width: 0px;
+        border-top-width: 0px;
+        border-left-width: 0px;
+        color: black;
+        float: right;
+        font-size: 16px;
+        font-family: 'Noto Sans KR', sans-serif;
+    }
+    .input-group>:not(:first-child):not(.dropdown-menu):not(.valid-tooltip):not(.valid-feedback):not(.invalid-tooltip):not(.invalid-feedback) {
+        margin-left: 0px;
+        border-top-left-radius: 0;
+        border-bottom-left-radius: 0;
+        color: black;
+        text-align: right;
+        padding: 10px;
+        font-size: 20px;
+        font-family: 'Noto Sans KR';
+    }
+</style>
 
 
-    <!-- Wrapper -->
-    <div id="wrapper">
+<!-- Wrapper -->
+<div id="wrapper">
 
-        <!-- Header -->
-        <header id="header">
-            <div class="inner">
+    <!-- Header -->
+    <header id="header">
+        <div class="inner">
 
-                <!-- Logo -->
-                <a href="/home" class="logo">
-                    <span class="title">INHA Study</span>
-                </a>
+            <!-- Logo -->
+            <a href="/" class="logo">
+                <span class="title">INHA Study</span>
+            </a>
+            <form class="formLogin" action="/login" method="GET">
+                <button class="btn btn-primary btn-sm">Login</button>
+            </form>
+        </div>
+    </header>
+
+    <!-- Main -->
+    <div id="main" style="margin-top: 70px;">
+        <div class="inner">
+            <header>
+                <h1>스터디 그룹을 찾고<br>
+                    그룹원과 함께 목표를 달성하세요
+                </h1>
+            </header>
+            <div class="input-group mb-3">
+
+                <form action="/home/search" method="GET">
+                    <input name="roomTitle" type="text" class="form-control" placeholder="스터디 그룹을 검색하세요" aria-label="Text input with dropdown button" style="height: 56px;width: 480px;">
+                </form>
             </div>
-        </header>
 
-        <button class="btn btn-primary btn-sm">Login
-        </button>
-        <!-- Main -->
-        <div id="main" style="margin-top: 70px;">
-            <div class="inner">
-                <header>
-                    <h1>스터디 그룹을 찾고<br>
-                        그룹원과 함께 목표를 달성하세요
-                    </h1>
-                </header>
-                <div class="input-group mb-3">
+            <a class="btn btn-secondary btn-lg disabled" type="button" >#토익</a>
+            <a class="btn btn-secondary btn-lg disabled" type="button" >#알고리즘</a>
+            <a class="btn btn-secondary btn-lg disabled" type="button" >#GSAT</a>
+            <a class="btn btn-secondary btn-lg disabled" type="button" >#정처기</a>
+            <a class="btn btn-secondary btn-lg disabled" type="button" >#면접</a>
 
-                    <form action="/home/search" method="GET">
-                        <input name="roomTitle" type="text" class="form-control" placeholder="스터디 그룹을 검색하세요" aria-label="Text input with dropdown button" style="height: 56px;width: 480px;">
-                    </form>
-                </div>
+            <br><br>
+            <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#makeRoom"
+                    data-bs-whatever="@mdo">Create Room
+            </button>
+            <br><br>
 
-                <a class="btn btn-secondary btn-lg disabled" type="button" >#토익</a>
-                <a class="btn btn-secondary btn-lg disabled" type="button" >#알고리즘</a>
-                <a class="btn btn-secondary btn-lg disabled" type="button" >#GSAT</a>
-                <a class="btn btn-secondary btn-lg disabled" type="button" >#정처기</a>
-                <a class="btn btn-secondary btn-lg disabled" type="button" >#면접</a>
-
-                <br><br>
-                <button type="button" class="btn btn-outline-primary" data-bs-toggle="modal" data-bs-target="#makeRoom"
-                        data-bs-whatever="@mdo">Create Room
-                </button>
-                <br><br>
-
-                <div class="modal fade" id="makeRoom" tabindex="-1" aria-labelledby="makeRoomLabel" data-bs-backdrop="static" data-bs-keyboard="false" style="display: none;" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content createRoomModal_background">
-                            <div class="modal-header">
-                                <h5 class="modal-title createRoomModal_text1" id="makeRoomLabel">INHA STUDY</h5>
-                            </div>
-                            <div class="modal-body">
-                                <form>
-                                    <div class="mb-3">
-                                        <label for="room_title" class="col-form-label createRoomModal_text2">방 제목</label>
-                                        <input type="text" class="form-control" id="room_title" placeholder="최대 50자" maxlength="50" required="" style="
+            <div class="modal fade" id="makeRoom" tabindex="-1" aria-labelledby="makeRoomLabel" data-bs-backdrop="static" data-bs-keyboard="false" style="display: none;" aria-hidden="true">
+                <div class="modal-dialog">
+                    <div class="modal-content createRoomModal_background">
+                        <div class="modal-header">
+                            <h5 class="modal-title createRoomModal_text1" id="makeRoomLabel">INHA STUDY</h5>
+                        </div>
+                        <div class="modal-body">
+                            <form>
+                                <div class="mb-3">
+                                    <label for="room_title" class="col-form-label createRoomModal_text2">방 제목</label>
+                                    <input type="text" class="form-control" id="room_title" placeholder="최대 50자" maxlength="50" required="" style="
     margin-top: 20px;
 ">
-                                    </div>
-                                    <div class="row g-3">
-                                        <label class="col-form-label createRoomModal_text2" style="
+                                </div>
+                                <div class="row g-3">
+                                    <label class="col-form-label createRoomModal_text2" style="
     padding-left: 43px;
 ">모집 기간</label>
-                                        <div class="col" style="
+                                    <div class="col" style="
     margin-top: 30px;
 ">
-                                            <input type="date" class="form-control" id="re_start_date" placeholder="시작 일자" aria-label="re_start_date" required="">
-                                        </div>
-                                        <p class="createRoomModal_text4">~</p>
-                                        <div class="col">
-                                            <input type="date" class="form-control" id="re_end_date" placeholder="종료 일자" aria-label="re_end_date" required="" style="margin-top: 15px">
-                                        </div>
+                                        <input type="date" class="form-control" id="re_start_date" placeholder="시작 일자" aria-label="re_start_date" required="">
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="category" class="col-form-label createRoomModal_text2">카테고리</label>
-                                        <select class="form-select" id="category" aria-label="Default select example" required="" style="
+                                    <p class="createRoomModal_text4">~</p>
+                                    <div class="col">
+                                        <input type="date" class="form-control" id="re_end_date" placeholder="종료 일자" aria-label="re_end_date" required="" style="margin-top: 15px">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="category" class="col-form-label createRoomModal_text2">카테고리</label>
+                                    <select class="form-select" id="category" aria-label="Default select example" required="" style="
     margin-top: 20px;
 ">
-                                            <option selected="">카테고리</option>
-                                            <option value="전공 스터디">전공 스터디</option>
-                                            <option value="취업 스터디">취업 스터디</option>
-                                            <option value="자율 스터디">자율 스터디</option>
-                                            <option value="기타">기타</option>
-                                        </select>
-                                    </div>
-                                    <div class="mb-3">
-                                        <label for="max_join" class="col-form-label createRoomModal_text2" style="
+                                        <option selected="">카테고리</option>
+                                        <option value="전공 스터디">전공 스터디</option>
+                                        <option value="취업 스터디">취업 스터디</option>
+                                        <option value="어학 스터디">어학 스터디</option>
+                                        <option value="기타">기타</option>
+                                    </select>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="max_join" class="col-form-label createRoomModal_text2" style="
 ">최대 입장 인원</label>
-                                        <input type="number" class="form-control" id="max_join" oninput="maxPeople(this, 100)" placeholder="최대 인원 100명" required="" style="
+                                    <input type="number" class="form-control" id="max_join" oninput="maxPeople(this, 100)" placeholder="최대 인원 100명" required="" style="
     margin-top: 20px;
 ">
-                                    </div>
-                                    <div class="row g-3">
-                                        <label class="col-form-label createRoomModal_text2" style="
+                                </div>
+                                <div class="row g-3">
+                                    <label class="col-form-label createRoomModal_text2" style="
     padding-left: 43px;
 ">활동 기간</label>
-                                        <div class="col" style="
+                                    <div class="col" style="
     margin-top: 30px;
 ">
-                                            <input type="date" class="form-control" id="ac_start_date" date-placeholder="시작 일자" aria-label="ac_start_date" required="">
-                                        </div>
-                                        <p class="createRoomModal_text4">~</p>
-                                        <div class="col">
-                                            <input type="date" class="form-control" id="ac_end_date" date-placeholder="종료 일자" aria-label="ac_end_date" required="" style="margin-top: 15px">
-                                        </div>
+                                        <input type="date" class="form-control" id="ac_start_date" date-placeholder="시작 일자" aria-label="ac_start_date" required="">
                                     </div>
-                                    <div class="mb-3">
-                                        <label for="location" class="col-form-label createRoomModal_text2">활동 장소</label>
-                                        <input type="text" class="form-control" id="location" placeholder="최대 50자" maxlength="50" required="" style="
+                                    <p class="createRoomModal_text4">~</p>
+                                    <div class="col">
+                                        <input type="date" class="form-control" id="ac_end_date" date-placeholder="종료 일자" aria-label="ac_end_date" required="" style="margin-top: 15px">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="location" class="col-form-label createRoomModal_text2">활동 장소</label>
+                                    <input type="text" class="form-control" id="location" placeholder="최대 50자" maxlength="50" required="" style="
     margin-top: 20px;
 ">
-                                    </div>
-                                    <div class="row g-3" style="
+                                </div>
+                                <div class="row g-3" style="
     margin-left: -8px;
 ">
-                                        <label class="col-form-label createRoomModal_text2" style="
+                                    <label class="col-form-label createRoomModal_text2" style="
     padding-left: 43px;
     margin-bottom: 0px;
     margin-top: 0px;
 ">활동 시간</label>
-                                        <div class="col">
-                                            <select class="form-select" id="study_count" aria-label="Default select example" required="">
-                                                <option selected="">스터디 횟수</option>
-                                                <option value="주 1회">주 1회</option>
-                                                <option value="주 2회">주 2회</option>
-                                                <option value="주 3회">주 3회</option>
-                                                <option value="주 4회">주 4회</option>
-                                                <option value="주 5회">주 5회</option>
-                                                <option value="주 6회">주 6회</option>
-                                                <option value="주 7회">주 7회</option>
-                                            </select>
-                                        </div>
-                                        <div class="col">
-                                            <input type="number" class="form-control" id="study_time" placeholder="소요 시간(숫자만 입력)" oninput="activityTime(this, 24)" aria-label="time" required="">
-                                        </div>
+                                    <div class="col">
+                                        <select class="form-select" id="study_count" aria-label="Default select example" required="">
+                                            <option selected="">스터디 횟수</option>
+                                            <option value="주 1회">주 1회</option>
+                                            <option value="주 2회">주 2회</option>
+                                            <option value="주 3회">주 3회</option>
+                                            <option value="주 4회">주 4회</option>
+                                            <option value="주 5회">주 5회</option>
+                                            <option value="주 6회">주 6회</option>
+                                            <option value="주 7회">주 7회</option>
+                                        </select>
+                                    </div>
+                                    <div class="col">
+                                        <input type="number" class="form-control" id="study_time" placeholder="소요 시간(숫자만 입력)" oninput="activityTime(this, 24)" aria-label="time" required="">
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="col-form-label createRoomModal_text2">활동 유형</label>
+                                    <div class="check_margin"></div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="active_type" id="online" value="온라인" checked="">
+                                        <label class="form-check-label createRoomModal_text3" for="online">
+                                            온라인
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="active_type" id="offline" value="오프라인">
+                                        <label class="form-check-label createRoomModal_text3" for="offline">
+                                            오프라인
+                                        </label>
+                                    </div>
+                                    <div class="form-check form-check-inline">
+                                        <input class="form-check-input" type="radio" name="active_type" id="blended" value="블렌디드">
+                                        <label class="form-check-label createRoomModal_text3" for="blended">
+                                            블렌디드
+                                        </label>
+                                    </div>
+                                </div>
+                                <div class="mb-3">
+                                    <label class="col-form-label createRoomModal_text2">활동 소개</label>
+                                    <div class="textarea-wrapper"><textarea rows="1" cols="10" class="form-control" id="info" placeholder="ex) 세부 활동 내용" style="overflow: hidden;resize: none;height: 0px;margin-top: 20px;"></textarea></div>
+                                </div>
+                            </form>
+                            <div class="modal-footer">
+                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                <button type="button" class="btn btn-primary" onclick="writeRoom()">생성</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+
+            <section class="tiles" style="margin-top: 0px;">
+                {{#roomList}}
+                    <article class="style{{category}}스터디">
+                                        <span class="image">
+                                            <img src="/images/pic02.jpg" alt="" />
+                                        </span>
+                        <a style="color: #fff">
+
+                            <h2>{{roomTitle}}</h2>
+                            <div class="content">
+                                <p>
+                                    <br>모집 기간: {{reStartDate}} ~ {{reEndDate}}
+                                    <br>활동 장소: {{location}}
+                                    <br>( {{curJoin}} / {{maxJoin}} )
+                                </p>
+                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" data-bs-toggle="modal" data-bs-target="#studyPlan{{id}}"
+                                        data-bs-whatever="@mdo">스터디계획서
+                                </button>
+                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;">가입신청
+                                </button>
+                            </div>
+
+                        </a>
+                    </article>
+                {{/roomList}}
+            </section>
+
+            <section class="tiles" style="margin-top: 0px;">
+                {{#room}}
+                    <article class="style{{category}}스터디">
+                                        <span class="image">
+                                            <img src="/images/pic02.jpg" alt="" />
+                                        </span>
+                        <a href="../generic.html">
+
+                            <h2>{{roomTitle}}</h2>
+                            <div class="content">
+                                <p>
+                                    <br>: {{info}}
+                                    <br>> {{location}}
+                                    <br>> {{activeType}}
+                                    <br>( {{curJoin}}/{{maxJoin}} )
+                                </p>
+                            </div>
+
+                        </a>
+                    </article>
+                {{/room}}
+            </section>
+            {{#roomList}}
+                <div class="modal fade" id="studyPlan{{id}}" tabindex="-1" aria-labelledby="studyPlanLabel" aria-hidden="true"
+                     data-bs-backdrop="static" data-bs-keyboard="false">
+                    <div class="modal-dialog">
+                        <div class="modal-content studyPlanModal_background">
+                            <div class="modal-header">
+                                <h5 class="modal-title studyPlanModal_text1" id="studyPlanLabel">* 스터디 계획서 *</h5>
+                            </div>
+                            <div class="modal-body">
+
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="room_title" class="col-form-label studyPlanModal_text2">방 제목</label>
+                                        <p class="studyPlanModal_text3">{{roomTitle}}</p>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="col-form-label createRoomModal_text2">활동 유형</label>
-                                        <div class="check_margin"></div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="active_type" id="online" value="온라인" checked="">
-                                            <label class="form-check-label createRoomModal_text3" for="online">
-                                                온라인
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="active_type" id="offline" value="오프라인">
-                                            <label class="form-check-label createRoomModal_text3" for="offline">
-                                                오프라인
-                                            </label>
-                                        </div>
-                                        <div class="form-check form-check-inline">
-                                            <input class="form-check-input" type="radio" name="active_type" id="blended" value="블렌디드">
-                                            <label class="form-check-label createRoomModal_text3" for="blended">
-                                                블렌디드
-                                            </label>
-                                        </div>
+                                        <label class="col-form-label studyPlanModal_text2">모집 기간</label>
+                                        <p class="studyPlanModal_text3">{{reStartDate}}   ~   {{reEndDate}}</p>
                                     </div>
                                     <div class="mb-3">
-                                        <label class="col-form-label createRoomModal_text2">활동 소개</label>
-                                        <div class="textarea-wrapper"><textarea rows="1" cols="10" class="form-control" id="info" placeholder="ex) 세부 활동 내용" style="overflow: hidden;resize: none;height: 0px;margin-top: 20px;"></textarea></div>
+                                        <label for="category" class="col-form-label studyPlanModal_text2">카테고리</label>
+                                        <p class="studyPlanModal_text3">{{category}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="max_join" class="col-form-label studyPlanModal_text2">최대 입장 인원</label>
+                                        <p class="studyPlanModal_text3">{{maxJoin}}명</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="col-form-label studyPlanModal_text2">활동 기간</label>
+                                        <p class="studyPlanModal_text3">{{acStartDate}}   ~   {{acEndDate}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="location" class="col-form-label studyPlanModal_text2">활동 장소</label>
+                                        <p class="studyPlanModal_text3">{{location}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="col-form-label studyPlanModal_text2">활동 시간</label>
+                                        <p class="studyPlanModal_text3">{{studyCount}}   /   {{studyTime}}시간</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="col-form-label studyPlanModal_text2">활동 유형</label>
+                                        <p class="studyPlanModal_text3">{{activeType}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="col-form-label studyPlanModal_text2">활동 소개</label>
+                                        <p class="studyPlanModal_text3">{{info}}</p>
                                     </div>
                                 </form>
+
                                 <div class="modal-footer">
                                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-                                    <button type="button" class="btn btn-primary" onclick="writeRoom()">생성</button>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
+            {{/roomList}}
 
-
-
-
-                <section class="tiles" style="margin-top: 0px;">
-                    {{#roomList}}
-                        <article class="style{{id}}">
-                                        <span class="image">
-                                            <img src="/images/pic02.jpg" alt="" />
-                                        </span>
-                            <a style="color: #fff">
-
-                                <h2>{{roomTitle}}</h2>
-                                <div class="content">
-                                    <p>
-                                        <br>모집 기간: {{reStartDate}} ~ {{reEndDate}}
-                                        <br>활동 장소: {{location}}
-                                        <br>( {{curJoin}} / {{maxJoin}} )
-                                    </p>
-                                    <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" data-bs-toggle="modal" data-bs-target="#studyPlan{{id}}"
-                                            data-bs-whatever="@mdo">스터디계획서
-                                    </button>
-                                    <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;">가입신청
-                                    </button>
-                                </div>
-
-                            </a>
-                        </article>
-                    {{/roomList}}
-                </section>
-
-                <section class="tiles" style="margin-top: 0px;">
-                    {{#room}}
-                        <article class="style{{id}}">
-                                        <span class="image">
-                                            <img src="/images/pic02.jpg" alt="" />
-                                        </span>
-                            <a href="../generic.html">
-
-                                <h2>{{roomTitle}}</h2>
-                                <div class="content">
-                                    <p>
-                                        <br>: {{info}}
-                                        <br>> {{location}}
-                                        <br>> {{activeType}}
-                                        <br>( {{curJoin}}/{{maxJoin}} )
-                                    </p>
-                                </div>
-
-                            </a>
-                        </article>
-                    {{/room}}
-                </section>
-                {{#roomList}}
-                    <div class="modal fade" id="studyPlan{{id}}" tabindex="-1" aria-labelledby="studyPlanLabel" aria-hidden="true"
-                         data-bs-backdrop="static" data-bs-keyboard="false">
-                        <div class="modal-dialog">
-                            <div class="modal-content studyPlanModal_background">
-                                <div class="modal-header">
-                                    <h5 class="modal-title studyPlanModal_text1" id="studyPlanLabel">* 스터디 계획서 *</h5>
-                                </div>
-                                <div class="modal-body">
-
-                                    <form>
-                                        <div class="mb-3">
-                                            <label for="room_title" class="col-form-label studyPlanModal_text2">방 제목</label>
-                                            <p class="studyPlanModal_text3">{{roomTitle}}</p>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="col-form-label studyPlanModal_text2">모집 기간</label>
-                                            <p class="studyPlanModal_text3">{{reStartDate}}   ~   {{reEndDate}}</p>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="category" class="col-form-label studyPlanModal_text2">카테고리</label>
-                                            <p class="studyPlanModal_text3">{{category}}</p>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="max_join" class="col-form-label studyPlanModal_text2">최대 입장 인원</label>
-                                            <p class="studyPlanModal_text3">{{maxJoin}}명</p>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="col-form-label studyPlanModal_text2">활동 기간</label>
-                                            <p class="studyPlanModal_text3">{{acStartDate}}   ~   {{acEndDate}}</p>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label for="location" class="col-form-label studyPlanModal_text2">활동 장소</label>
-                                            <p class="studyPlanModal_text3">{{location}}</p>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="col-form-label studyPlanModal_text2">활동 시간</label>
-                                            <p class="studyPlanModal_text3">{{studyCount}}   /   {{studyTime}}시간</p>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="col-form-label studyPlanModal_text2">활동 유형</label>
-                                            <p class="studyPlanModal_text3">{{activeType}}</p>
-                                        </div>
-                                        <div class="mb-3">
-                                            <label class="col-form-label studyPlanModal_text2">활동 소개</label>
-                                            <p class="studyPlanModal_text3">{{info}}</p>
-                                        </div>
-                                    </form>
-
-                                    <div class="modal-footer">
-                                        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                {{/roomList}}
-
-            </div>
         </div>
     </div>
+</div>
 
-    <!-- Scripts -->
-    <script>
-        function maxPeople(el, max) {
-            if (el.value > max) {
-                alert("최대 인원 수는 100명입니다.");
-                el.value = " ";
+<!-- Scripts -->
+<script>
+    function maxPeople(el, max) {
+        if (el.value > max) {
+            alert("최대 인원 수는 100명입니다.");
+            el.value = " ";
+        }
+    }
+    function activityTime(el, max) {
+        if (el.value > max) {
+            alert("소요 시간은 최대 24시간까지 가능합니다.");
+            el.value = " ";
+        }
+    }
+    function writeRoom() {
+        let room_title = $(`#room_title`).val();
+        let re_start_date = $(`#re_start_date`).val();
+        let re_end_date = $(`#re_end_date`).val();
+        let category = $(`#category`).val();
+        let max_join = $(`#max_join`).val();
+        let ac_start_date = $(`#ac_start_date`).val();
+        let ac_end_date = $(`#ac_end_date`).val();
+        let location = $(`#location`).val();
+        let study_count = $(`#study_count`).val();
+        let study_time = $(`#study_time`).val();
+        let active_type = $(`input[name=active_type]:checked`).val();
+        let info = $(`#info`).val();
+        console.log(active_type);
+        let data = {
+            'roomTitle': room_title,
+            'reStartDate': re_start_date,
+            'reEndDate': re_end_date,
+            'category': category,
+            'maxJoin': max_join,
+            'acStartDate': ac_start_date,
+            'acEndDate': ac_end_date,
+            'location': location,
+            'studyCount': study_count,
+            'studyTime': study_time,
+            'activeType': active_type,
+            'info': info
+        };
+        $.ajax({
+            type: "POST",
+            url: "/api",
+            contentType: "application/json",
+            data: JSON.stringify(data),
+            success: function (response) {
+                alert('방이 성공적으로 생성되었습니다.');
+                window.location.reload();
             }
-        }
-        function activityTime(el, max) {
-            if (el.value > max) {
-                alert("소요 시간은 최대 24시간까지 가능합니다.");
-                el.value = " ";
-            }
-        }
-        function writeRoom() {
-            let room_title = $(`#room_title`).val();
-            let re_start_date = $(`#re_start_date`).val();
-            let re_end_date = $(`#re_end_date`).val();
-            let category = $(`#category`).val();
-            let max_join = $(`#max_join`).val();
-            let ac_start_date = $(`#ac_start_date`).val();
-            let ac_end_date = $(`#ac_end_date`).val();
-            let location = $(`#location`).val();
-            let study_count = $(`#study_count`).val();
-            let study_time = $(`#study_time`).val();
-            let active_type = $(`input[name=active_type]:checked`).val();
-            let info = $(`#info`).val();
-            console.log(active_type);
-            let data = {
-                'roomTitle': room_title,
-                'reStartDate': re_start_date,
-                'reEndDate': re_end_date,
-                'category': category,
-                'maxJoin': max_join,
-                'acStartDate': ac_start_date,
-                'acEndDate': ac_end_date,
-                'location': location,
-                'studyCount': study_count,
-                'studyTime': study_time,
-                'activeType': active_type,
-                'info': info
-            };
-            $.ajax({
-                type: "POST",
-                url: "/api",
-                contentType: "application/json",
-                data: JSON.stringify(data),
-                success: function (response) {
-                    alert('방이 성공적으로 생성되었습니다.');
-                    window.location.reload();
-                }
-            })
-        }
-    </script>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="/assets/js/jquery.min.js"></script>
-    <script src="/assets/js/browser.min.js"></script>
-    <script src="/assets/js/breakpoints.min.js"></script>
-    <script src="/assets/js/util.js"></script>
-    <script src="/assets/js/main.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        })
+    }
+</script>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+<script src="/assets/js/jquery.min.js"></script>
+<script src="/assets/js/browser.min.js"></script>
+<script src="/assets/js/breakpoints.min.js"></script>
+<script src="/assets/js/util.js"></script>
+<script src="/assets/js/main.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 </html>

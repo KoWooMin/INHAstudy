@@ -1,12 +1,11 @@
 package com.inhastudy.domain;
 
 import com.inhastudy.dto.RoomDto;
-import com.inhastudy.dto.RoomForm;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
 import org.hibernate.annotations.ColumnDefault;
-import org.jetbrains.annotations.NotNull;
+import org.hibernate.annotations.DynamicInsert;
 
 import javax.persistence.*;
 
@@ -14,6 +13,7 @@ import javax.persistence.*;
 @AllArgsConstructor
 @NoArgsConstructor
 @Getter
+@DynamicInsert
 public class Room {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -58,12 +58,12 @@ public class Room {
     @Column(nullable = true)
     private String info;
 
-    public Room(@NotNull RoomDto requestDto) {
+    public Room(RoomDto requestDto) {
         this.roomTitle = requestDto.getRoomTitle();
         this.reStartDate=requestDto.getReStartDate();
         this.reEndDate = requestDto.getReEndDate();
         this.category = requestDto.getCategory();
-        this.curJoin = 1;
+        this.curJoin = requestDto.getCurJoin();
         this.maxJoin = requestDto.getMaxJoin();
         this.acStartDate = requestDto.getAcStartDate();
         this.acEndDate = requestDto.getAcEndDate();
@@ -74,4 +74,5 @@ public class Room {
         this.info = requestDto.getInfo();
     }
 }
+
 

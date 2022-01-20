@@ -14,7 +14,7 @@ public class RoomDto {
     private java.sql.Date reStartDate;
     private java.sql.Date reEndDate;
     private String category;
-    //private Integer curJoin;
+    private Integer curJoin;
     private Integer maxJoin;
     private java.sql.Date acStartDate;
     private java.sql.Date acEndDate;

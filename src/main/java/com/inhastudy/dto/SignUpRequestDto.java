@@ -17,4 +17,5 @@ public class SignUpRequestDto {
     private String phoneNumber;
     private String email;
     private String checkLogin;
+    private String ssn;
 }

@@ -38,7 +38,10 @@ public class SignUp {
     @Column(nullable = true)
     private String checkLogin;
 
-    public SignUp(String id, String major, String username, String password, Integer grade, String sex, String phoneNumber, String email, String checkLogin) {
+    @Column(nullable = true)
+    private String ssn;
+
+    public SignUp(String id, String major, String username, String password, Integer grade, String sex, String phoneNumber, String email, String checkLogin, String ssn) {
         this.id = id;
         this.major = major;
         this.username = username;
@@ -48,6 +51,7 @@ public class SignUp {
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.checkLogin = checkLogin;
+        this.ssn = ssn;
     }
 
     public SignUp(SignUpRequestDto requestDto) {
@@ -60,6 +64,7 @@ public class SignUp {
         this.phoneNumber = requestDto.getPhoneNumber();
         this.email = requestDto.getEmail();
         this.checkLogin = requestDto.getCheckLogin();
+        this.ssn = requestDto.getSsn();
     }
 
     public void update(SignUpRequestDto signupRequestDto) {
@@ -72,6 +77,7 @@ public class SignUp {
         this.phoneNumber = signupRequestDto.getPhoneNumber();
         this.email = signupRequestDto.getEmail();
         this.checkLogin = signupRequestDto.getCheckLogin();
+        this.ssn = signupRequestDto.getSsn();
     }
 
     public void updateCheckLogin(String checkLogin){
