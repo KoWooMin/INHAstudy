@@ -123,6 +123,34 @@
             </div>
             <input type="text" id="userId" value="null"/>
 
+            <section class="tiles" style="margin-top: 0px;">
+                {{#roomList}}
+                    <article class="style{{category}}스터디">
+                                        <span class="image">
+                                            <img src="/images/pic02.jpg" alt="" />
+                                        </span>
+                        <a style="color: #fff">
+
+                            <h2>{{roomTitle}}</h2>
+                            <div class="content">
+                                <p>
+                                    <br>모집 기간: {{reStartDate}} ~ {{reEndDate}}
+                                    <br>활동 장소: {{location}}
+                                    <br>( {{curJoin}} / {{maxJoin}} )
+                                </p>
+                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" data-bs-toggle="modal" data-bs-target="#studyPlan{{id}}"
+                                        data-bs-whatever="@mdo">스터디계획서
+                                </button>
+                                <button href="/memo/{{id}} "type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" onclick="checkLoginJoin()">가입신청
+                                </button>
+                            </div>
+
+                        </a>
+                    </article>
+                    <input type="text" id="roomId{{id}}" value="{{id}}"/>
+                {{/roomList}}
+
+            </section>
         </div>
     </div>
 
