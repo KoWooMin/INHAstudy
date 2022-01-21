@@ -23,5 +23,6 @@ public class RoomDto {
     private Integer studyTime;
     private String activeType;
     private String info;
+    private String hostId;
 
 }

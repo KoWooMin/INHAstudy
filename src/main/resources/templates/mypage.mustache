@@ -4,7 +4,6 @@
     <title>INHA STUDY</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css" />
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@100;500&display=swap" rel="stylesheet">
@@ -90,6 +89,40 @@
         font-size: 20px;
         font-family: 'Noto Sans KR';
     }
+
+    .modal-content {
+        overflow-y: initial !important;
+        border: 2px solid white;
+        border-radius: 20px;
+    }
+    .modal-body {
+        height: 600px;
+        overflow-y: auto;
+    }
+
+    .studyPlanModal_text1{
+        font-size: 30px;
+        color: black;
+        font-family: 'Noto Sans KR', sans-serif;
+        margin: auto;
+    }
+    .studyPlanModal_text2{
+        font-size: 25px;
+        color: lightslategray;
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-bottom: -25px;
+    }
+    .studyPlanModal_text3{
+        font-size: 25px;
+        color: black;
+        font-family: 'Noto Sans KR', sans-serif;
+        margin-top: 20px;
+    }
+
+    .studyPlanModal_background{
+        background: #fff;
+    }
+
 </style>
 
 
@@ -112,7 +145,7 @@
     <div id="main" style="margin-top: 70px;">
         <div class="inner">
             <header>
-                <h1><span id="userName"></span> 님,&nbsp 환영합니다.
+                <h1>{{#member}}{{username}}{{/member}}님,&nbsp 환영합니다.
                 </h1>
             </header>
             <hr class="mb-4">
@@ -125,6 +158,7 @@
 
             <section class="tiles" style="margin-top: 0px;">
                 {{#roomList}}
+
                     <article class="style{{category}}스터디">
                                         <span class="image">
                                             <img src="/images/pic02.jpg" alt="" />
@@ -141,23 +175,83 @@
                                 <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" data-bs-toggle="modal" data-bs-target="#studyPlan{{id}}"
                                         data-bs-whatever="@mdo">스터디계획서
                                 </button>
-                                <button href="/memo/{{id}} "type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" onclick="checkLoginJoin()">가입신청
+                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" onclick="checkLoginJoin({{id}})">가입신청
                                 </button>
                             </div>
 
                         </a>
                     </article>
                     <input type="text" id="roomId{{id}}" value="{{id}}"/>
-                {{/roomList}}
 
+                {{/roomList}}
             </section>
+            {{#roomList}}
+                <div class="modal fade" id="studyPlan{{id}}" tabindex="-1" aria-labelledby="studyPlanLabel" aria-hidden="true"
+                     data-bs-backdrop="static" data-bs-keyboard="false">
+                    <div class="modal-dialog">
+                        <div class="modal-content studyPlanModal_background">
+                            <div class="modal-header">
+                                <h5 class="modal-title studyPlanModal_text1" id="studyPlanLabel">* 스터디 계획서 *</h5>
+                            </div>
+                            <div class="modal-body">
+
+                                <form>
+                                    <div class="mb-3">
+                                        <label for="room_title" class="col-form-label studyPlanModal_text2">방 제목</label>
+                                        <p class="studyPlanModal_text3">{{roomTitle}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="col-form-label studyPlanModal_text2">모집 기간</label>
+                                        <p class="studyPlanModal_text3">{{reStartDate}}   ~   {{reEndDate}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="category" class="col-form-label studyPlanModal_text2">카테고리</label>
+                                        <p class="studyPlanModal_text3">{{category}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="max_join" class="col-form-label studyPlanModal_text2">최대 입장 인원</label>
+                                        <p class="studyPlanModal_text3">{{maxJoin}}명</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="col-form-label studyPlanModal_text2">활동 기간</label>
+                                        <p class="studyPlanModal_text3">{{acStartDate}}   ~   {{acEndDate}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label for="location" class="col-form-label studyPlanModal_text2">활동 장소</label>
+                                        <p class="studyPlanModal_text3">{{location}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="col-form-label studyPlanModal_text2">활동 시간</label>
+                                        <p class="studyPlanModal_text3">{{studyCount}}   /   {{studyTime}}시간</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="col-form-label studyPlanModal_text2">활동 유형</label>
+                                        <p class="studyPlanModal_text3">{{activeType}}</p>
+                                    </div>
+                                    <div class="mb-3">
+                                        <label class="col-form-label studyPlanModal_text2">활동 소개</label>
+                                        <p class="studyPlanModal_text3">{{info}}</p>
+                                    </div>
+                                </form>
+
+                                <div class="modal-footer">
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            {{/roomList}}
         </div>
     </div>
-
 </div>
-}
+
 
 <script>
+    function checkLoginJoin(roomId){
+        window.location.href = "/memo.html?user=" + roomId;
+    }
+
     function switchCheckLogin(inputId) {
         $.ajax({
             type: 'PUT',

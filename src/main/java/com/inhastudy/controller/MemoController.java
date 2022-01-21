@@ -1,8 +1,10 @@
 package com.inhastudy.controller;
 
 import com.inhastudy.domain.Memo;
-import com.inhastudy.domain.MemoRepository;
+import com.inhastudy.domain.Room;
+import com.inhastudy.repository.MemoRepository;
 import com.inhastudy.domain.MemoRequestDto;
+import com.inhastudy.repository.RoomRepository;
 import com.inhastudy.service.MemoService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
@@ -14,6 +16,7 @@ import java.util.List;
 @RestController
 public class MemoController {
 
+    private final RoomRepository roomRepository;
     private final MemoRepository memoRepository;
     private final MemoService memoService;
 
@@ -31,6 +34,10 @@ public class MemoController {
     }
 
 
+    @GetMapping("/api/memos/{roomId}")
+    public List<Memo> readRoomMemo(@PathVariable String roomId ){
+        return memoRepository.findAllByRoomNumOrderByModifiedAtDesc(roomId);
+    }
 
     @DeleteMapping("/api/memos/{id}")
     public Long deleteMemo(@PathVariable Long id){
@@ -44,4 +51,8 @@ public class MemoController {
         return id;
     }
 
+    @GetMapping("/rooms/{id}")
+    public Room getOneRoom(@PathVariable String id){
+        return roomRepository.findRoomById(Long.parseLong(id));
+    }
 }

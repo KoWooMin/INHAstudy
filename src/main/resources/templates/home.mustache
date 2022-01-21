@@ -17,54 +17,44 @@
             font-family: 'Noto Sans KR', sans-serif;
             margin: auto;
         }
-
         .createRoomModal_text2 {
             font-size: 25px;
             color: #fff;
             font-family: 'Noto Sans KR', sans-serif;
             margin-bottom: -25px;
         }
-
         .createRoomModal_text3 {
             font-size: 20px;
             color: #fff;
             font-family: 'Noto Sans KR', sans-serif;
         }
-
         .createRoomModal_text4 {
             width: 26px;
             font-size: 20px;
             color: #fff;
             font-family: 'Noto Sans KR', sans-serif;
         }
-
         .createRoomModal_background {
             background: #7f9dff;
         }
-
         .check_margin {
             margin-bottom: 15px;
         }
-
         .modal-content {
             overflow-y: initial !important;
             border: 2px solid white;
             border-radius: 20px;
         }
-
         .modal-body {
             height: 600px;
             overflow-y: auto;
         }
-
         .row {
             margin-bottom: 20px;
         }
-
         .color1 {
             background: brown;
         }
-
         .studyPlanModal_text1{
             font-size: 30px;
             color: black;
@@ -89,14 +79,12 @@
             color: black;
             font-family: 'Noto Sans KR', sans-serif;
             margin-top: 20px;
-
         }
         .studyPlanModal_background{
             background: #fff;
         }
     </style>
 </head>
-
 <body class="is-preload">
 <style>
     .btn-secondary.disabled, .btn-secondary:disabled {
@@ -215,9 +203,7 @@
             </div>
             <div>
                 <br>
-                <form class="formLogin" action="mypage" method="GET">
-                    <button class="btn btn2-sm" id="myPage" style="display: none">MY PAGE</button>
-                </form>
+                <button class="btn btn2-sm" id="myPage" style="display: none" onclick="moveMyPage()">MY PAGE</button>
 
                 <button type="button" class="btn btn-outline-primary" id="createRoom" data-bs-toggle="modal"
                         data-bs-whatever="@mdo" onclick="checkLoginCreateRoom()">Create Room
@@ -239,19 +225,20 @@
     margin-top: 20px;
 ">
                                 </div>
-                                <div class="row g-3">
-                                    <label class="col-form-label createRoomModal_text2" style="
-    padding-left: 43px;
-">모집 기간</label>
-                                    <div class="col" style="
-    margin-top: 30px;
-">
-                                        <input type="date" class="form-control" id="re_start_date" placeholder="시작 일자" aria-label="re_start_date" required="">
+                                <div class="mb-3">
+                                    <label class="col-form-label createRoomModal_text2">모집 기간</label>
+                                    <div class="row" style="margin-top: 50px">
+                                        <div class="col">
+                                            <input type="date" class="form-control" id="re_start_date" style="width: 100px;" placeholder="시작 일자" aria-label="re_start_date" required="">
+                                        </div>
+                                        <div class="col">
+                                            <h1> ~ </h1>
+                                        </div>
+                                        <div class="col">
+                                            <input type="date" class="form-control" id="re_end_date" style="width: 100px;" placeholder="종료 일자" aria-label="re_end_date" required="" style="margin-top: 15px">
+                                        </div>
                                     </div>
-                                    <p class="createRoomModal_text4">~</p>
-                                    <div class="col">
-                                        <input type="date" class="form-control" id="re_end_date" placeholder="종료 일자" aria-label="re_end_date" required="" style="margin-top: 15px">
-                                    </div>
+
                                 </div>
                                 <div class="mb-3">
                                     <label for="category" class="col-form-label createRoomModal_text2">카테고리</label>
@@ -259,23 +246,20 @@
     margin-top: 20px;
 ">
                                         <option selected="">카테고리</option>
-                                        <option value="전공 스터디">전공 스터디</option>
-                                        <option value="취업 스터디">취업 스터디</option>
-                                        <option value="어학 스터디">어학 스터디</option>
+                                        <option value="전공">전공 스터디</option>
+                                        <option value="취업">취업 스터디</option>
+                                        <option value="어학">어학 스터디</option>
                                         <option value="기타">기타</option>
                                     </select>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="max_join" class="col-form-label createRoomModal_text2" style="
-">최대 입장 인원</label>
+                                    <label for="max_join" class="col-form-label createRoomModal_text2">최대 입장 인원</label>
                                     <input type="number" class="form-control" id="max_join" oninput="maxPeople(this, 100)" placeholder="최대 인원 100명" required="" style="
     margin-top: 20px;
 ">
                                 </div>
-                                <div class="row g-3">
-                                    <label class="col-form-label createRoomModal_text2" style="
-    padding-left: 43px;
-">활동 기간</label>
+                                <div class="mb-3">
+                                    <label class="col-form-label createRoomModal_text2">활동 기간</label>
                                     <div class="col" style="
     margin-top: 30px;
 ">
@@ -292,14 +276,8 @@
     margin-top: 20px;
 ">
                                 </div>
-                                <div class="row g-3" style="
-    margin-left: -8px;
-">
-                                    <label class="col-form-label createRoomModal_text2" style="
-    padding-left: 43px;
-    margin-bottom: 0px;
-    margin-top: 0px;
-">활동 시간</label>
+                                <div class="mb-3">
+                                    <label class="col-form-label createRoomModal_text2">활동 시간</label>
                                     <div class="col">
                                         <select class="form-select" id="study_count" aria-label="Default select example" required="">
                                             <option selected="">스터디 횟수</option>
@@ -341,6 +319,11 @@
                                 <div class="mb-3">
                                     <label class="col-form-label createRoomModal_text2">활동 소개</label>
                                     <div class="textarea-wrapper"><textarea rows="1" cols="10" class="form-control" id="info" placeholder="ex) 세부 활동 내용" style="overflow: hidden;resize: none;height: 0px;margin-top: 20px;"></textarea></div>
+
+                                </div>
+                                <div class="mb-3">
+                                    <label class="col-form-label createRoomModal_text2">방장 정보</label>
+                                    <input type="text" id="hostId"/>
                                 </div>
                             </form>
                             <div class="modal-footer">
@@ -357,7 +340,7 @@
 
             <section class="tiles" style="margin-top: 0px;">
                 {{#roomList}}
-                    <article class="style{{category}}스터디">
+                    <article class="style{{category}}">
                                         <span class="image">
                                             <img src="/images/pic02.jpg" alt="" />
                                         </span>
@@ -373,7 +356,7 @@
                                 <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" data-bs-toggle="modal" data-bs-target="#studyPlan{{id}}"
                                         data-bs-whatever="@mdo">스터디계획서
                                 </button>
-                                <button href="/memo/{{id}} "type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" onclick="checkLoginJoin()">가입신청
+                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" onclick="checkLoginJoin({{id}})">가입신청
                                 </button>
                             </div>
 
@@ -448,8 +431,11 @@
 
 <!-- Scripts -->
 <script>
-
     let checkLogin;
+
+    function moveMyPage(){
+        location.href = "/mypage/" + localStorage.getItem("localId");
+    }
 
     function checkLoginCreateRoom(){
         if(checkLogin==='Y') {
@@ -459,16 +445,20 @@
             location.href = "/login.html"
         }
     }
-
-    function checkLoginJoin(){
+    function checkLoginJoin(roomId){
         if (checkLogin === 'Y') {
-            location.href="/memo.html"
+            $.ajax({
+                type: "PUT",
+                url: `/api/addCurJoin/${roomId}`,
+                success: function (response) {
+                }
+            })
+            window.location.href = "/memo.html?roomId=" + roomId;
         }else {
             alert("로그인 후 이용해주세요");
             location.href = "/login.html"
         }
     }
-
     function maxPeople(el, max) {
         if (el.value > max) {
             alert("최대 인원 수는 100명입니다.");
@@ -494,6 +484,7 @@
         let study_time = $(`#study_time`).val();
         let active_type = $(`input[name=active_type]:checked`).val();
         let info = $(`#info`).val();
+        let hostId=$(`#hostId`).val();
         console.log(active_type);
         let data = {
             'roomTitle': room_title,
@@ -507,7 +498,8 @@
             'studyCount': study_count,
             'studyTime': study_time,
             'activeType': active_type,
-            'info': info
+            'info': info,
+            'hostId':hostId
         };
         $.ajax({
             type: "POST",
@@ -520,22 +512,20 @@
             }
         })
     }
-
     window.onload=function (){
         localId();
+        hostId();
     }
-
     function localId(){
         if(localStorage.getItem('localId')){
             document.getElementById("localId").value = localStorage.getItem('localId');
-
             $.ajax({
                 type: 'GET',
                 url: `/api/getCheckLogin/${localStorage.getItem('localId')}`,
                 contentType: "String",
                 success: function (response){
                     if(response === 'Y'){
-                        alert("CheckLogin 정보(Y)를 가져왔습니다.")
+                        alert("CheckLogin 정보(Y)를 가져왔습니다.");
                         $(`#myPage`).show();
                         checkLogin=response;
                         document.getElementById("switchLogin").innerHTML =
@@ -561,6 +551,10 @@
         }
     }
 
+    function hostId(){
+        document.getElementById("hostId").value=localStorage.getItem("localId");
+    }
+
     function switchCheckLogin(inputId) {
         $.ajax({
             type: 'PUT',
@@ -572,6 +566,7 @@
         location.href = "/";
         return false;
     }
+
 
 
 </script>

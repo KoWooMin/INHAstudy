@@ -1,7 +1,7 @@
 package com.inhastudy.service;
 
 import com.inhastudy.domain.Memo;
-import com.inhastudy.domain.MemoRepository;
+import com.inhastudy.repository.MemoRepository;
 import com.inhastudy.domain.MemoRequestDto;
 import lombok.RequiredArgsConstructor;
 import org.springframework.stereotype.Service;

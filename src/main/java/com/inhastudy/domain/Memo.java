@@ -22,22 +22,28 @@ public class Memo extends Timestamped { // 생성,수정 시간을 자동으로 
     @Column(nullable = false)
     private String notice;
 
-    public Memo(String username, String contents, String notice) {
+    @Column(nullable = false)
+    private String roomNum;
+
+    public Memo(String username, String contents, String notice, String roomNum) {
         this.username = username;
         this.contents = contents;
         this.notice = notice;
+        this.roomNum = roomNum;
     }
 
     public Memo(MemoRequestDto requestDto) {
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();
         this.notice = requestDto.getNotice();
+        this.roomNum = requestDto.getRoomNum();
     }
 
     public void update(MemoRequestDto requestDto) {
         this.username = requestDto.getUsername();
         this.contents = requestDto.getContents();
         this.notice = requestDto.getNotice();
+        this.roomNum = requestDto.getRoomNum();
     }
 
 }
