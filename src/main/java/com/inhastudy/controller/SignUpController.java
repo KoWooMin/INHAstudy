@@ -93,4 +93,10 @@ public class SignUpController {
 
         return "/home";
     }
+
+    @GetMapping("/api/deliverName/{inputId}")
+    public SignUp deliverName(@PathVariable String inputId){
+        System.out.println("되는거냐?");
+        return signupRepository.findSignUpById(inputId);
+    }
 }

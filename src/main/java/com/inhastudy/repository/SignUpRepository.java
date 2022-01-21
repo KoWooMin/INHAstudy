@@ -7,4 +7,5 @@ import lombok.Setter;
 import org.springframework.data.jpa.repository.JpaRepository;
 public interface SignUpRepository extends JpaRepository<SignUp, String>{
     SignUp findSignUpById(String id);
+
 }

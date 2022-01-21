@@ -454,7 +454,7 @@
         }
 
     </style>
-    <script>
+    <script charset="UTF-8">
         let realRoomId;
 
         function getRoomId(){
@@ -462,7 +462,6 @@
             //alert(getLink);
             let getRoomId = getLink.split('=');	//getLink를 '='를 기준으로 두 배열 요소로 분리
             realRoomId = getRoomId[1];	//분리한 배열 중 두번째 요소 변수에 넣기
-            console.log(getRoomId);
         }
 
         // 사용자가 내용을 올바르게 입력하였는지 확인합니다.
@@ -536,7 +535,6 @@
                 type: 'GET',
                 url: `/api/memos/${realRoomId}`,
                 success: function (response) {
-                    console.log(response);
                     for (let i = 0; i < response.length; i++) {
                         let message = response[i];
                         let notice = message['notice']
@@ -622,17 +620,34 @@
             $('#notice-cards-box').append(tempHtml);
         }
         // 메모를 생성합니다.
+
+        let username;
+
+        function getUserName(){
+            tempId = localStorage.getItem("localId")
+            $.ajax({
+                type: "GET",
+                url: `/api/deliverName/${tempId}`,
+                async: false,
+                success: function (response) {
+                    username = response['username'];
+                    return true;
+                }
+            })
+        }
+
         function writePost() {
             // 1. 작성한 메모를 불러옵니다.
             let contents = $('#contents').val();
+
             let checked = $("input[name='notice_check']").prop("checked");
-            console.log(checked);
+
             // 2. 작성한 메모가 올바른지 isValidContents 함수를 통해 확인합니다.
             if (isValidContents(contents) == false) {
                 return;
             }
             // 3. genRandomName 함수를 통해 익명의 username을 만듭니다.
-            let username = genRandomName(10);
+            getUserName();
             // 4. 전달할 data JSON으로 만듭니다.
             let data;
             if (checked === true){
@@ -646,8 +661,10 @@
             $.ajax({
                 type: "POST",
                 url: "/api/memos",
-                contentType: "application/json", // JSON 형식으로 전달함을 알리기
+                //contentType: "application/x-www-form-urlencoded; charset=UTF-8;",
+                contentType: "application/json",
                 data: JSON.stringify(data),
+                async: false,
                 success: function (response) {
                     alert('메시지가 성공적으로 작성되었습니다.');
                     window.location.reload();
@@ -713,7 +730,6 @@
                 url: `/rooms/${roomId}`,
                 contentType:"application/json",
                 success: function (response) {
-                    console.log(response);
                     let acEndDate = response['acEndDate'];
                     let acStartDate = response['acStartDate'];
                     let activeType = response['activeType'];
@@ -800,9 +816,11 @@
         <button class="modal_close_btn" type="button">닫기</button>
     </div>
 </div>
-<input type="text" id="localId"/>
-<script>
+<input type="text" id="localId" style="display: none"/>
+<script charset="UTF-8">
+    let inputId;
     window.onload=function (){
+        inputId = document.getElementById("localId").value
         localId();
     }
 
