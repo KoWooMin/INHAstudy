@@ -58,6 +58,9 @@ public class Room {
     @Column(nullable = true)
     private String info;
 
+    @Column(nullable = false)
+    private String hostId;
+
     public Room(RoomDto requestDto) {
         this.roomTitle = requestDto.getRoomTitle();
         this.reStartDate=requestDto.getReStartDate();
@@ -72,6 +75,7 @@ public class Room {
         this.studyTime = requestDto.getStudyTime();
         this.activeType = requestDto.getActiveType();
         this.info = requestDto.getInfo();
+        this.hostId=requestDto.getHostId();
     }
 }
 
