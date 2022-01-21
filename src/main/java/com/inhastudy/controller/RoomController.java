@@ -26,7 +26,6 @@ public class RoomController {
 
     @GetMapping("login")
     public String login() {
-
         return "login";
     }
 
@@ -48,14 +47,6 @@ public class RoomController {
         model.addAttribute("roomList", roomList);
         return "home";
     }
-    @GetMapping("/api/rooms/titles/{id}")
-    public Room getOneRoom(@PathVariable String id){
-        System.out.println("되는거냐 ㅠㅠ");
-        return roomRepository.findRoomById(Long.parseLong(id));
-    }
-
-
-
 
 
 }

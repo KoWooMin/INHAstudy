@@ -709,11 +709,11 @@
         }
 
         function readSchedule(){
-            let roomId = '1';
+            let roomId = realRoomId
             $.ajax({
                 type: 'GET',
-                url: `/api/rooms/titles/${roomId}`,
-                contentType: "application/json",
+                url: `/rooms/${roomId}`,
+                contentType:"application/json",
                 success: function (response) {
                     console.log(response);
                     let acEndDate = response['acEndDate'];
@@ -736,6 +736,11 @@
                     $('.modal_body_sub').empty();
                     $('.modal_body_sub').append(temphtml);
 
+                },
+                error : function (error){
+
+                    console.log(error);
+                    console.log("에러가 나버린 것이에요,,,");
                 }
             })
         }
