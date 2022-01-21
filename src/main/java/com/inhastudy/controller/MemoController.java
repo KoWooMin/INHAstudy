@@ -1,7 +1,7 @@
 package com.inhastudy.controller;
 
 import com.inhastudy.domain.Memo;
-import com.inhastudy.domain.MemoRepository;
+import com.inhastudy.repository.MemoRepository;
 import com.inhastudy.domain.MemoRequestDto;
 import com.inhastudy.service.MemoService;
 import lombok.RequiredArgsConstructor;

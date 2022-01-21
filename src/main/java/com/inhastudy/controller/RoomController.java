@@ -7,7 +7,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Collection;
 import java.util.Collections;
 import java.util.List;
 
@@ -48,6 +47,11 @@ public class RoomController {
         List<Room> roomList = roomRepository.findByRoomTitleContainingIgnoreCase(roomTitle);
         model.addAttribute("roomList", roomList);
         return "home";
+    }
+    @GetMapping("/api/rooms/titles/{id}")
+    public Room getOneRoom(@PathVariable String id){
+        System.out.println("되는거냐 ㅠㅠ");
+        return roomRepository.findRoomById(Long.parseLong(id));
     }
 
 

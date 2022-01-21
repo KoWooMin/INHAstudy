@@ -361,7 +361,7 @@
                                 <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" data-bs-toggle="modal" data-bs-target="#studyPlan{{id}}"
                                         data-bs-whatever="@mdo">스터디계획서
                                 </button>
-                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" onclick="checkLoginJoin()">가입신청
+                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" onclick="checkLoginJoin({{id}})">가입신청
                                 </button>
                             </div>
 
@@ -447,9 +447,9 @@
             alert("오류!");
         }
     }
-    function checkLoginJoin(){
+    function checkLoginJoin(roomId){
         if (checkLogin === 'Y') {
-            location.href="/memo.html"
+            window.location.href = "/memo.html?user=" + roomId;
         }else {
             alert("로그인 후 이용해주세요");
             location.href = "/login.html"
@@ -553,6 +553,9 @@
         location.href = "/";
         return false;
     }
+
+
+
 </script>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 <script src="/assets/js/jquery.min.js"></script>

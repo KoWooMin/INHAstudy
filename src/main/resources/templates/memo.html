@@ -455,8 +455,16 @@
 
     </style>
     <script>
-        let noticeId = 0;
-        // 미리 작성된 영역 - 수정하지 않으셔도 됩니다.
+        let realRoomId;
+
+        function getRoomId(){
+            let getLink = window.location.search;
+            alert(getLink);
+            let getRoomId = getLink.split('=');	//getLink를 '='를 기준으로 두 배열 요소로 분리
+            realRoomId = getRoomId[1];	//분리한 배열 중 두번째 요소 변수에 넣기
+            console.log(getRoomId);
+        }
+
         // 사용자가 내용을 올바르게 입력하였는지 확인합니다.
         function isValidContents(contents) {
             if (contents == '') {
@@ -514,6 +522,7 @@
 
         $(document).ready(function () {
             // HTML 문서를 로드할 때마다 실행합니다.
+            getRoomId();
             getMessages();
         })
 
@@ -753,7 +762,7 @@
 </div>
 <div class="wrap">
     <div class="header">
-        <div class="header-title" style="line-height: 80px;">
+        <div class="header-title" style="line-height: 80px; cursor: pointer" onclick="location.href ='/'">
             <img src="images/INHA%20logo.png" alt="" style="width: 80px; height: 80px; vertical-align: top;">
             INHA STUDY
         </div>

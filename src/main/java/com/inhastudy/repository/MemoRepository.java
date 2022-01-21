@@ -1,5 +1,6 @@
-package com.inhastudy.domain;
+package com.inhastudy.repository;
 
+import com.inhastudy.domain.Memo;
 import org.springframework.data.jpa.repository.JpaRepository;
 
 import java.time.LocalDateTime;
