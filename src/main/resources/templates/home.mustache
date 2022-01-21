@@ -329,6 +329,11 @@
                                 <div class="mb-3">
                                     <label class="col-form-label createRoomModal_text2">활동 소개</label>
                                     <div class="textarea-wrapper"><textarea rows="1" cols="10" class="form-control" id="info" placeholder="ex) 세부 활동 내용" style="overflow: hidden;resize: none;height: 0px;margin-top: 20px;"></textarea></div>
+
+                                </div>
+                                <div class="mb-3">
+                                    <label class="col-form-label createRoomModal_text2">방장 정보</label>
+                                    <input type="text" id="hostId"/>
                                 </div>
                             </form>
                             <div class="modal-footer">
@@ -440,11 +445,9 @@
     function checkLoginCreateRoom(){
         if(checkLogin==='Y') {
             $(`#makeRoom`).modal('show');
-        }else if(checkLogin ==='N'){
+        }else {
             alert("로그인 후 이용해주세요")
             location.href = "/login.html"
-        }else{
-            alert("오류!");
         }
     }
     function checkLoginJoin(roomId){
@@ -480,6 +483,7 @@
         let study_time = $(`#study_time`).val();
         let active_type = $(`input[name=active_type]:checked`).val();
         let info = $(`#info`).val();
+        let hostId=$(`#hostId`).val();
         console.log(active_type);
         let data = {
             'roomTitle': room_title,
@@ -493,7 +497,8 @@
             'studyCount': study_count,
             'studyTime': study_time,
             'activeType': active_type,
-            'info': info
+            'info': info,
+            'hostId':hostId
         };
         $.ajax({
             type: "POST",
@@ -508,6 +513,7 @@
     }
     window.onload=function (){
         localId();
+        hostId();
     }
     function localId(){
         if(localStorage.getItem('localId')){
@@ -542,6 +548,11 @@
             })
         }
     }
+
+    function hostId(){
+        document.getElementById("hostId").value=localStorage.getItem("localId");
+    }
+
     function switchCheckLogin(inputId) {
         $.ajax({
             type: 'PUT',

@@ -840,7 +840,16 @@
         <button class="modal_close_btn" type="button">닫기</button>
     </div>
 </div>
+<input type="text" id="localId"/>
 <script>
+    window.onload=function (){
+        localId();
+    }
+
+    function localId(){
+        document.getElementById("localId").value=localStorage.getItem("localId");
+    }
+
     const schedule_modal = document.querySelector('.schedule_modal');
     const btnOpenPopup = document.querySelector('.schedule-button');
     btnOpenPopup.addEventListener('click', () => {

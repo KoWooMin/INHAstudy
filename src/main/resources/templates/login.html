@@ -86,21 +86,15 @@
         margin-bottom: 40px;
         width:80%;
         height:40px;
-        background: linear-gradient(125deg,#E6F0EF,#A8C5DB,#DEE7EA);
-        background-position: left;
-        background-size: 200%;
+        background: #7f9dff;
         font-size:150%;
         color:white;
         font-weight: bold;
         border:none;
         cursor:pointer;
         transition: 0.4s;
-        display:inline;
         text-shadow: 1px 1px 1px #000;
-    }
-
-    .btn:hover {
-        background-position: right;
+        border-radius: 5px;
     }
 
     .bottomText {
@@ -202,10 +196,10 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width,initial-scale=1">
 
-<h1 class="main_title" onclick="moveMainPage()">INHA STUDY</h1>
+<h1 class="main_title"> <span onclick="moveMainPage()" style="cursor:pointer;"> INHA STUDY </span></h1>
 <body width="100%" height="100%">
 <form action="index.html" method="post" class="loginForm">
-    <h2>Login</h2>
+    <h2>LOGIN</h2>
     <div class="idForm">
         <label for="inputId"></label><input type="text" id="inputId" class="id" placeholder="ID" maxlength="12" minlength="4" required>
     </div>
@@ -216,7 +210,7 @@
         로그인
     </button>
     <div class="bottomText">
-        아이디가 없으신가요? <a href="#" id="start" onclick="moveSignUpPage()">회원가입</a>
+        아이디가 없으신가요? <a href="#" id="start" onclick="moveSignUpPage()" style="color: blue">회원가입</a>
     </div>
 </form>
 </body>
