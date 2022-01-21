@@ -33,6 +33,11 @@ public class MemoController {
         return memoRepository.findAllByModifiedAtBetweenOrderByModifiedAtDesc(start, end);
     }
 
+    @GetMapping("/api/memos/{roomId}")
+    public List<Memo> readRoomMemo(@PathVariable String roomId ){
+        return memoRepository.findAllByRoomNumOrderByModifiedAtDesc(roomId);
+    }
+
 
 
     @DeleteMapping("/api/memos/{id}")

@@ -459,7 +459,7 @@
 
         function getRoomId(){
             let getLink = window.location.search;
-            alert(getLink);
+            //alert(getLink);
             let getRoomId = getLink.split('=');	//getLink를 '='를 기준으로 두 배열 요소로 분리
             realRoomId = getRoomId[1];	//분리한 배열 중 두번째 요소 변수에 넣기
             console.log(getRoomId);
@@ -534,7 +534,7 @@
             // 2. 메모 목록을 불러와서 HTML로 붙입니다.
             $.ajax({
                 type: 'GET',
-                url: '/api/memos',
+                url: `/api/memos/${realRoomId}`,
                 success: function (response) {
                     console.log(response);
                     for (let i = 0; i < response.length; i++) {
@@ -625,9 +625,7 @@
         function writePost() {
             // 1. 작성한 메모를 불러옵니다.
             let contents = $('#contents').val();
-
             let checked = $("input[name='notice_check']").prop("checked");
-
             console.log(checked);
             // 2. 작성한 메모가 올바른지 isValidContents 함수를 통해 확인합니다.
             if (isValidContents(contents) == false) {
@@ -638,10 +636,10 @@
             // 4. 전달할 data JSON으로 만듭니다.
             let data;
             if (checked === true){
-                data = {'username': username, 'contents': contents, 'notice': 'Y'};
+                data = {'username': username, 'contents': contents, 'notice': 'Y', 'roomNum': realRoomId};
             }
             else {
-                data = {'username': username, 'contents': contents, 'notice': 'N'};
+                data = {'username': username, 'contents': contents, 'notice': 'N', 'roomNum': realRoomId};
             }
 
             // 5. POST /api/memos 에 data를 전달합니다.
@@ -667,7 +665,7 @@
                 return;
             }
             // 3. 전달할 data JSON으로 만듭니다.
-            let data = {'username': username, 'contents': contents, 'notice': 'N'};
+            let data = {'username': username, 'contents': contents, 'notice': 'N', 'roomNum': realRoomId};
             // 4. PUT /api/memos/{id} 에 data를 전달합니다.
             $.ajax({
                 type: "PUT",
@@ -736,21 +734,6 @@
                     $('.modal_body_sub').empty();
                     $('.modal_body_sub').append(temphtml);
 
-                },
-                error : function (error){
-
-                    console.log(error);
-                    console.log("에러가 나버린 것이에요,,,");
-                }
-            })
-        }
-
-        function readTitle(){
-            $.ajax({
-                type: 'GET',
-                url: '/api/rooms/titles',
-                success: function(response){
-                    console.log(response);
                 }
             })
         }
@@ -798,37 +781,9 @@
 
     </div>
     <div id="notice-cards-box" class="area-read">
-        ddddddd
     </div>
     <div id="cards-box" class="area-read">
 
-        <div class="card">
-            <!-- date/username 영역 -->
-            <div class="metadata">
-                <div class="date">
-                    October 10, 2020
-                </div>
-                <div id="1-username" class="username">
-                    anonymous
-                </div>
-            </div>
-            <!-- contents 조회/수정 영역-->
-            <div class="contents">
-                <div id="1-contents" class="text">
-                     예시내용입니다.
-                </div>
-                <div id="1-editarea" class="edit">
-                    <textarea id="1-textarea" class="te-edit" name="" id="" cols="30" rows="5"></textarea>
-                </div>
-            </div>
-            <!-- 버튼 영역-->
-            <div class="footer">
-                <img id="1-edit" onclick="editPost('1')" class="icon-start-edit" src="images/edit.png" alt="">
-                <img id="1-delete" onclick="deleteOne('1')" class="icon-delete" src="images/delete.png" alt="">
-                <img id="1-submit" onclick="submitEdit('1')" class="icon-end-edit" src="images/done.png" alt="">
-                <img id="1-back" onclick="hideEdits('1')" class="icon-back-edit" src="images/back.png" alt="">
-            </div>
-        </div>
     </div>
 </div>
 <div class="schedule_modal">
