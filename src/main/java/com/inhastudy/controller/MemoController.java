@@ -1,7 +1,9 @@
 package com.inhastudy.controller;
 
+import com.inhastudy.domain.MemberRoom;
 import com.inhastudy.domain.Memo;
 import com.inhastudy.domain.Room;
+import com.inhastudy.repository.MemberRoomRepository;
 import com.inhastudy.repository.MemoRepository;
 import com.inhastudy.domain.MemoRequestDto;
 import com.inhastudy.repository.RoomRepository;
@@ -19,6 +21,7 @@ public class MemoController {
     private final RoomRepository roomRepository;
     private final MemoRepository memoRepository;
     private final MemoService memoService;
+    private final MemberRoomRepository memberRoomRepository;
 
     @PostMapping("/api/memos")
     public Memo createMemo(@RequestBody MemoRequestDto requestDto){
@@ -55,4 +58,10 @@ public class MemoController {
     public Room getOneRoom(@PathVariable String id){
         return roomRepository.findRoomById(Long.parseLong(id));
     }
+
+    @GetMapping("/join/{roomId}")
+    public List<MemberRoom> getJoinUsers(@PathVariable String roomId){
+        return memberRoomRepository.findByRoomId(roomId);
+    }
+
 }
