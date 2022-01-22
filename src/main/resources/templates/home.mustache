@@ -453,6 +453,12 @@
                 success: function (response) {
                 }
             })
+            $.ajax({
+                type: "GET",
+                url: `/api/insertRoomId/${roomId}/${localStorage.getItem('localId')}`,
+                success: function (response) {
+                }
+            })
             window.location.href = "/memo.html?roomId=" + roomId;
         }else {
             alert("로그인 후 이용해주세요");

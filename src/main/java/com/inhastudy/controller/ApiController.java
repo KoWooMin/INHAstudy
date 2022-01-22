@@ -1,8 +1,11 @@
 package com.inhastudy.controller;
 
+import com.inhastudy.domain.MemberRoom;
 import com.inhastudy.domain.Room;
 import com.inhastudy.domain.SignUp;
+import com.inhastudy.dto.MemberRoomDto;
 import com.inhastudy.dto.RoomDto;
+import com.inhastudy.repository.MemberRoomRepository;
 import com.inhastudy.repository.RoomRepository;
 import com.inhastudy.service.RoomService;
 import com.inhastudy.service.SignUpService;
@@ -13,6 +16,7 @@ import org.springframework.web.bind.annotation.*;
 @RestController
 public class ApiController {
 
+    private final MemberRoomRepository memberRoomRepository;
     private final RoomRepository roomRepository;
     private final RoomService roomService;
 
@@ -24,9 +28,19 @@ public class ApiController {
 
     @PutMapping("/api/addCurJoin/{roomId}") // 로그인한 사용자 checkLogin을 Y로 변경
     public void addCurJoin(@PathVariable Long roomId){
-        System.out.println("hi");
+
         Room room = roomRepository.findById(roomId).orElse(null);
         roomService.addCurJoin(room);
+    }
+
+    @GetMapping("/api/insertRoomId/{roomId}/{memberId}")
+    public void insertRoomId(@PathVariable Long roomId, @PathVariable String memberId){
+        Room room = memberRoomRepository.findRoomByRoomId(roomId);
+        SignUp member = memberRoomRepository.findMemberByMemberId(memberId);
+        System.out.println(room.getId());
+        MemberRoomDto memberRoomDto = new MemberRoomDto(room, member);
+        MemberRoom memberRoom = new MemberRoom(memberRoomDto);
+        memberRoomRepository.save(memberRoom);
     }
 
 }
