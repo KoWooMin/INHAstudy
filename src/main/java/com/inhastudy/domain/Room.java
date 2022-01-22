@@ -63,7 +63,6 @@ public class Room {
     private String hostId;
 
     public Room(RoomDto requestDto) {
-        this.id = requestDto.getId();
         this.roomTitle = requestDto.getRoomTitle();
         this.reStartDate=requestDto.getReStartDate();
         this.reEndDate = requestDto.getReEndDate();

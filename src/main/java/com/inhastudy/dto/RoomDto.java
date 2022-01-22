@@ -12,7 +12,6 @@ import lombok.Setter;
 @AllArgsConstructor
 public class RoomDto {
 
-    private Long id;
     private String roomTitle;
     private java.sql.Date reStartDate;
     private java.sql.Date reEndDate;
@@ -27,5 +26,4 @@ public class RoomDto {
     private String activeType;
     private String info;
     private String hostId;
-
 }
