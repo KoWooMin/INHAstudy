@@ -1,11 +1,8 @@
 package com.inhastudy.controller;
 
-import com.inhastudy.domain.MemberRoom;
-import com.inhastudy.domain.Memo;
-import com.inhastudy.domain.Room;
+import com.inhastudy.domain.*;
 import com.inhastudy.repository.MemberRoomRepository;
 import com.inhastudy.repository.MemoRepository;
-import com.inhastudy.domain.MemoRequestDto;
 import com.inhastudy.repository.RoomRepository;
 import com.inhastudy.service.MemoService;
 import lombok.RequiredArgsConstructor;
@@ -60,8 +57,9 @@ public class MemoController {
     }
 
     @GetMapping("/join/{roomId}")
-    public List<MemberRoom> getJoinUsers(@PathVariable String roomId){
-        return memberRoomRepository.findByRoomId(roomId);
+    public List<SignUp> getJoinUsers(@PathVariable String roomId){
+        Long temp = Long.parseLong(roomId);
+        return memberRoomRepository.findMemberByRoomId(temp);
     }
 
 }
