@@ -15,6 +15,7 @@
 ## 🔥 [INHA STUDY] 서비스 소개
 ### 🙋‍♂️ 메인 페이지
 메인 페이지에서는 기존에 생성되어 있는 스터디그룹의 목록이 나타납니다😮  
+![image](https://user-images.githubusercontent.com/88971743/150680122-9d6c7283-3687-40b8-9d97-671c56a99e1d.png)
 
 자신이 원하는 주제의 스터디그룹을 찾고 싶다면 검색 버튼에서 키워드를 입력하면 됩니다🤗  
 
@@ -25,6 +26,7 @@
 이제 입장 버튼을 눌러보세요! [**로그인 후 이용하세요**]라는 창을 마주하셨나요?  
 로그인을 하지 않았다면 스터디 그룹에 입장할 수가 없습니다😭  
 
+<img src="https://user-images.githubusercontent.com/88971743/150679913-776bbb67-e33c-46f3-9812-a248908387ff.png" width="100" height="100"/>  
 ![image](https://user-images.githubusercontent.com/88971743/150679913-776bbb67-e33c-46f3-9812-a248908387ff.png)
 
 로그인 창으로 이동하셨다면 두 가지의 선택지가 있습니다❗  
@@ -32,3 +34,10 @@
 2️⃣ 기존 회원이 아니라면 [**회원가입**] 버튼을 눌러 회원가입을 진행하러 갑니다😀
 
 ##### ✔️회원 가입 설명
+
+
+
+![image](https://user-images.githubusercontent.com/88971743/150680004-14b12731-fe1c-4132-8aba-e2793a8fc793.png)
+
+![image](https://user-images.githubusercontent.com/88971743/150680104-d4f54c0f-1913-4614-94b5-38320df825e5.png)
+
