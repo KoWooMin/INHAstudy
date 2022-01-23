@@ -757,9 +757,20 @@
 
         function readUserList(){
             let roomId = realRoomId
+            let hostId;
+            $.ajax({
+                type: 'GET',
+                url: `/rooms/${roomId}`,
+                async: false,
+                contentType: "application/json",
+                success: function (response){
+                    hostId = response['hostId'];
+                }
+            })
             $.ajax({
                 type: 'GET',
                 url: `/join/${roomId}`,
+                async: false,
                 contentType:"application/json",
                 success: function (response) {
                     $('.modal_body_sub').empty();
@@ -767,10 +778,16 @@
                                     <div class="right">이름</div>`;
                     $('.modal_body_sub').append(temphtml);
                     for(let i=0;i<response.length; i++){
-                        console.log(response[i]);
-                        let temphtmlInfo = `<div class="left">${response[i]['ssn']}</div>
+                        if(response[i]['id'] === hostId){
+                            let temphtmlInfo = `<div class="left">${response[i]['ssn']}</div>
+                                    <div class="right">${response[i]['username']} [방장]</div>`;
+                            $('.modal_body_sub').append(temphtmlInfo);
+                        }
+                        else {
+                            let temphtmlInfo = `<div class="left">${response[i]['ssn']}</div>
                                     <div class="right">${response[i]['username']}</div>`;
-                        $('.modal_body_sub').append(temphtmlInfo);
+                            $('.modal_body_sub').append(temphtmlInfo);
+                        }
                     }
                 }
             })
