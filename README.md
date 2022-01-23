@@ -53,10 +53,10 @@
 방이 생성되었다면 들어가기 버튼을 통해 방에 입장해주세요😀</br></br>
 
 ### 🙋‍♂️ 스터디 룸 페이지</br>
-<img src="https://user-images.githubusercontent.com/88971743/150682414-3ac688e4-2879-4efe-8e29-986badba308a.png" width="30%" height="30%"></img></br>
+<img src="https://user-images.githubusercontent.com/88971743/150682414-3ac688e4-2879-4efe-8e29-986badba308a.png" width="40%" height="40%"></img></br>
 이 페이지가 바로 스터디 그룹원끼리 소통을 나누게 될 곳입니다❗🤗</br>
 이 곳에서는 화면에 보이는 것처럼 [**스터디 계획서 조회**], [**일반 메모 및 공지 메모 작성**], [**참여자 목록 조회**]가 가능합니다!</br></br>
 
-<img src="https://user-images.githubusercontent.com/88971743/150682917-6b9fba9c-f9c8-471a-8be6-f7b625fee0ce.png" width="30%" height="30%"></img></br>
+<img src="https://user-images.githubusercontent.com/88971743/150682917-6b9fba9c-f9c8-471a-8be6-f7b625fee0ce.png" width="40%" height="40%"></img></br>
 위 처럼 하얗게 나타는 메모는 [**일반 메모**]이고 붉은 색으로 나타는 메모는 [**공지 메모**]입니다. 두 메모 모두 수정과 삭제가 가능합니다😀</br>
 만약 공지를 보기 싫다면 상단의 [**공지 숨기기**]버튼을 통해 공지를 숨길 수 있습니다❗
