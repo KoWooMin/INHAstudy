@@ -23,8 +23,6 @@ public class RoomForm {
     private Integer studyTime;
     private String activeType;
     private String info;
+    private String hostId;
 
-    public Room toEntity() {
-        return new Room(null, roomTitle, reStartDate, reEndDate, category, curJoin, maxJoin, acStartDate, acEndDate, location, studyCount, studyTime, activeType, info);
-    }
 }

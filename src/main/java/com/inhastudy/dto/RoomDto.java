@@ -4,8 +4,10 @@ import com.inhastudy.domain.Room;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
+import lombok.Setter;
 
 @Getter
+@Setter
 @NoArgsConstructor
 @AllArgsConstructor
 public class RoomDto {
@@ -23,5 +25,5 @@ public class RoomDto {
     private Integer studyTime;
     private String activeType;
     private String info;
-
+    private String hostId;
 }
