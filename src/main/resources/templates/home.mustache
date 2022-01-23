@@ -362,7 +362,7 @@
                                 <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff; box-shadow: inset 0 0 0 2px #fff;" data-bs-toggle="modal" data-bs-target="#studyPlan{{id}}"
                                         data-bs-whatever="@mdo">스터디계획서
                                 </button>
-                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff; box-shadow: inset 0 0 0 2px #fff;" onclick="checkLoginJoin({{id}})">가입신청
+                                <button type="button" class="btn btn-primary" id="joinButton{{id}}" style="background-color:transparent; border-color: #fff; box-shadow: inset 0 0 0 2px #fff;" onclick="checkLoginJoin({{id}})">가입신청
                                 </button>
                             </div>
 
@@ -454,40 +454,23 @@
     function checkLoginJoin(roomId){
         if (checkLogin === 'Y') {
             $.ajax({
-                async: false,
-                type: "GET",
-                url: `/api/CheckDuplicate/${roomId}/${localStorage.getItem('localId')}`,
+                async:false,
+                type: "PUT",
+                url: `/api/addCurJoin/${roomId}`,
                 success: function (response) {
-                    if (response == "AlreadyRegistered") {
-                        alert("이미 가입된 방입니다.")
-                        window.location.href = "/memo.html?roomId=" + roomId;
-                        return false;
-                    } else {
+                    if (response === "approve") {
+                        alert("방에 성공적으로 가입 되셨습니다.");
                         $.ajax({
                             async: false,
-                            type: "PUT",
-                            url: `/api/addCurJoin/${roomId}`,
+                            type: "GET",
+                            url: `/api/insertRoomId/${roomId}/${localStorage.getItem('localId')}`,
                             success: function (response) {
-                                if (response === "approve") {
-                                    alert("방에 성공적으로 가입 되셨습니다.");
-                                    $.ajax({
-                                        async: false,
-                                        type: "GET",
-                                        url: `/api/insertRoomId/${roomId}/${localStorage.getItem('localId')}`,
-                                        success: function (response) {
-                                        }
-                                        // }, error: function () {
-                                        //     alert("이미 가입된 방입니다.")
-                                        //     window.location.href = "/memo.html?roomId=" + roomId;
-                                        // }
-                                    })
-                                    window.location.href = "/memo.html?roomId=" + roomId;
-                                } else if (response === "reject") {
-                                    alert("이미 인원이 가득 찬 방입니다.");
-                                    return false;
-                                }
                             }
                         })
+                        window.location.href = "/memo.html?roomId=" + roomId;
+                    } else if (response === "reject") {
+                        alert("이미 인원이 가득 찬 방입니다.");
+                        return false;
                     }
                 }
             })
@@ -552,6 +535,7 @@
     window.onload=function (){
         localId();
         hostId();
+        getRoomId();
     }
     function localId(){
         if(localStorage.getItem('localId')){
@@ -602,6 +586,27 @@
         localStorage.setItem("localId",null);
         location.href = "/";
         return false;
+    }
+
+    function getRoomId(){
+        $.ajax({
+            type: "GET",
+            url: `/api/checkMemberRoom/${localStorage.getItem('localId')}`,
+            success: function (response){
+                alert(response);
+                for(let i=0;i<response.length;i++){
+                    let a='joinButton'+response[i]
+                    document.getElementById(a).innerHTML='들어가기';
+                    document.getElementById(a).onclick=function (){
+                        location.href='/memo.html?user='+response[i];
+                    }
+                }
+            },
+            error: function (){
+                alert("오류!");
+            }
+
+        })
     }
 
 

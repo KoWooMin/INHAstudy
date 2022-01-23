@@ -23,7 +23,6 @@ public interface MemberRoomRepository extends JpaRepository<MemberRoom, Long> {
     @Query(value = "select T.member from MemberRoom as T where T.member.id = :memberId")
     SignUp findMemberByMemberId(@Param("memberId") String memberId);
 
-    @Query(value = "select T.member.id from MemberRoom as T where T.room.id = :roomId")
-    List<String> findMemberListByRoomId(@Param("roomId") Long roomId);
-
+    @Query(value = "select T.room.id from MemberRoom as T where T.member.id=:memberId")
+    List<Long> findRoomId(@Param("memberId") String memberId);
 }

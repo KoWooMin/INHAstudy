@@ -9,13 +9,11 @@ import com.inhastudy.repository.MemberRoomRepository;
 import com.inhastudy.repository.RoomRepository;
 import com.inhastudy.repository.SignUpRepository;
 import com.inhastudy.service.RoomService;
+import com.inhastudy.service.SignUpService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
-import java.util.Arrays;
 import java.util.List;
-import java.util.Objects;
-import java.util.Optional;
 
 @RequiredArgsConstructor
 @RestController
@@ -51,21 +49,12 @@ public class ApiController {
         MemberRoomDto memberRoomDto = new MemberRoomDto(room, member);
         MemberRoom memberRoom = new MemberRoom(memberRoomDto);
         memberRoomRepository.save(memberRoom);
-
     }
 
-    @GetMapping("/api/CheckDuplicate/{roomId}/{memberId}")
-    public String CheckDuplicate(@PathVariable Long roomId, @PathVariable String memberId){
-        Room room = roomRepository.findById(roomId).orElse(null);
-        List<String> findMemberList = memberRoomRepository.findMemberListByRoomId(roomId);
-        for(int i = 0; i< room.getMaxJoin(); i++) {
-            if (memberId.equals(findMemberList.get(i))) {
-                return "AlreadyRegistered";
-            }
-        }
-        return "join";
-
-        //memberRoom.getMember()
+    @GetMapping("/api/checkMemberRoom/{memberId}")
+    public List<Long> checkMemberRoom(@PathVariable String memberId){
+        List<Long> roomId = memberRoomRepository.findRoomId(memberId);
+        System.out.println(roomId);
+        return roomId;
     }
 }
-
