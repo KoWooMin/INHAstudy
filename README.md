@@ -15,15 +15,15 @@
 ## 🔥 [INHA STUDY] 서비스 소개
 ### 🙋‍♂️ 메인 페이지  
 
-<img src="https://user-images.githubusercontent.com/88971743/150680122-9d6c7283-3687-40b8-9d97-671c56a99e1d.png" width="200" height="200"/>  
+<img src="https://user-images.githubusercontent.com/88971743/150680122-9d6c7283-3687-40b8-9d97-671c56a99e1d.png" width="200" height="200"/>
 메인 페이지에서는 위와 같이 기존에 생성되어 있는 스터디그룹의 목록이 나타납니다😮  
 
 자신이 원하는 주제의 스터디그룹을 찾고 싶다면 검색 버튼에서 키워드를 입력하면 됩니다🤗  
 
 <img src="https://user-images.githubusercontent.com/88971743/150680336-5d34d31a-8c77-471c-a012-c4f01cc21278.png" width="200" height="200"/>
-
 원하는 스터디그룹을 찾았다면 마우스를 올려보세요! 스터디 계획서 버튼과 입장 버튼이 나타납니다😮  
 
+<img src="https://user-images.githubusercontent.com/88971743/150680392-b44e2f9d-e055-4c29-956a-b0ebccbedca2.png" width="200" height="400"/>
 스터디 계획서 버튼을 누르면 해당 스터디 그룹의 [**모집 기간**], [**활동 기간**], [**활동 유형**], [**카테고리**], [**현재 참여 인원**], [**최대 참여 인원**], [**활동 장소**], [**스터디 횟수**], [**추가 상세 정보**] 를 조회할 수 있습니다❗  
 
 이제 입장 버튼을 눌러보세요! [**로그인 후 이용하세요**]라는 창을 마주하셨나요?  
