@@ -31,19 +31,29 @@
 이제 스터디 그룹 참여를 위해 입장 버튼을 눌러보세요! 혹시 [**로그인 후 이용해주세요**]라는 창을 마주하셨나요?</br>
 [**INHA STUDY**] 서비스는 로그인을 하지 않았다면 이용할 수 없습니다😭</br></br>
 
-<img src="https://user-images.githubusercontent.com/88971743/150679913-776bbb67-e33c-46f3-9812-a248908387ff.png" width="30%" height="30%"/>  
+### 🙋‍♂️ 로그인 페이지</br>
+<img src="https://user-images.githubusercontent.com/88971743/150679913-776bbb67-e33c-46f3-9812-a248908387ff.png" width="30%" height="30%"></img></br>
+로그인 창으로 이동하셨다면 두 가지의 선택지가 있습니다❗</br>
+1️⃣ 자신이 회원가입이 되어 있다면 바로 ID와 비밀번호를 입력하여 로그인을 진행하면 됩니다❗</br>
+2️⃣ 기존 회원이 아니라면 [**회원가입**] 버튼을 눌러 회원가입을 진행하러 갑니다😀</br></br>
 
+### 🙋‍♂️ 회원가입 페이지</br>
+<img src="https://user-images.githubusercontent.com/88971743/150681084-aff61427-d6c1-4402-b825-2c55d710126b.png" width="30%" height="30%"/> <img src="https://user-images.githubusercontent.com/88971743/150681251-cf11578d-de99-479a-aae3-c4a4fb042179.png" width="30.5%" height="30.5%"/></br>
+위 사진은 회원 가입 페이지입니다. 빈칸에 알맞은 정보를 입력하고 회원 가입 버튼을 누르면 계정 생성에 성공합니다🤗</br>
+중복된 아이디는 허용하지 않습니다❗❗</br>
 
-로그인 창으로 이동하셨다면 두 가지의 선택지가 있습니다❗  
-1️⃣ 자신이 회원가입이 되어 있다면 바로 ID와 비밀번호를 입력하여 로그인을 진행하면 됩니다❗  
-2️⃣ 기존 회원이 아니라면 [**회원가입**] 버튼을 눌러 회원가입을 진행하러 갑니다😀
-
-##### ✔️[회원 가입] 설명</br>
-<img src="https://user-images.githubusercontent.com/88971743/150681084-aff61427-d6c1-4402-b825-2c55d710126b.png" width="30%" height="30%"/> <img src="https://user-images.githubusercontent.com/88971743/150681251-cf11578d-de99-479a-aae3-c4a4fb042179.png" width="31%" height="31%"/></br>
-위 사진은 회원 가입 페이지입니다. 빈칸에 알맞은 정보를 입력하고 회원 가입 버튼을 누르면 계정 생성에 성공합니다.</br>
-중복된 아이디는 허용하지 않습니다❗❗
+#### ✔️회원가입에 성공했다면 해당 계정으로 계속해서 진행해주세요!</br>
+<img src="https://user-images.githubusercontent.com/88971743/150681378-798bef32-c760-428c-9e8d-41e447a0cbe2.png" width="30%" height="30%"/></br>
+방금 회원가입한 계정으로 로그인을 해주세요🤗</br></br>
 
 <img src="https://user-images.githubusercontent.com/88971743/150680004-14b12731-fe1c-4132-8aba-e2793a8fc793.png" width="30%" height="30%"></img></br>
+이런 본인이 원하는 스터디 그룹이 없나요?🤔 걱정하지 마세요❗ 회원이 직접 스터디 그룹을 생성할 수도 있습니다.</br>
+[**CREATE ROOM**]버튼을 클릭하면 위와 같은 창을 볼 수 있습니다. 원하는 정보를 기입한 후에 방을 생성해주세요.</br>
+
+<img src="https://user-images.githubusercontent.com/88971743/150682287-c837ba9a-c001-4550-9df7-6cf7f2b91fd2.png" width="30%" height="30%"></img></br>
+위 사진처럼 정보를 전부 입력했다면 생성 버튼을 클릭해주세요. 이후 들어가기 버튼을 통해 방에 입장해주세요.</br></br>
+
+<img src="https://user-images.githubusercontent.com/88971743/150682414-3ac688e4-2879-4efe-8e29-986badba308a.png" width="30%" height="30%"></img></br>
 
 ![image](https://user-images.githubusercontent.com/88971743/150680104-d4f54c0f-1913-4614-94b5-38320df825e5.png)
 
