@@ -4,6 +4,10 @@
     <title>INHA STUDY</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+    <meta property="og:title" content="INHA STUDY">
+    <meta property="og:description" content="스터디그룹을 생성하고 그룹원을 모아보세요!">
+    <meta property="og:image" content="https://ifh.cc/g/72QCxI.png">
+
 
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="/assets/css/main.css" />
@@ -204,9 +208,9 @@
             </div>
             <div>
                 <br>
-                <button class="btn btn2-sm" id="myPage" style="display: none" onclick="moveMyPage()">MY PAGE</button>
+                <button class="btn btn2-sm" id="myPage" style="display: none; margin-right: 0px" onclick="moveMyPage()">MY PAGE</button>
 
-                <button type="button" class="btn btn-outline-primary" id="createRoom" data-bs-toggle="modal" data-bs-whatever="@mdo" onclick="checkLoginCreateRoom()" style="margin-right: 1px;">Create Room
+                <button type="button" class="btn btn-outline-primary" id="createRoom" data-bs-toggle="modal" data-bs-whatever="@mdo" onclick="checkLoginCreateRoom()" style="margin-right: 8px;">Create Room
                 </button>
                 <br><br>
                 <input id="localId" type="text" hidden>
@@ -222,9 +226,7 @@
                             <form>
                                 <div class="mb-3">
                                     <label for="room_title" class="col-form-label createRoomModal_text2">방 제목</label>
-                                    <input type="text" class="form-control" id="room_title" placeholder="최대 50자" maxlength="50" required="" style="
-    margin-top: 20px;
-">
+                                    <input type="text" class="form-control" id="room_title" placeholder="    최대 50자" maxlength="50" required="" style="margin-top: 30px; background-color:white; height: 40px; border-radius: 4px">
                                 </div>
                                 <div class="mb-3">
                                     <label class="col-form-label createRoomModal_text2">모집 기간</label>
@@ -271,9 +273,7 @@
                                 </div>
                                 <div class="mb-3">
                                     <label for="location" class="col-form-label createRoomModal_text2">활동 장소</label>
-                                    <input type="text" class="form-control" id="location" placeholder="최대 50자" maxlength="50" required="" style="
-    margin-top: 20px;
-">
+                                    <input type="text" class="form-control" id="location" placeholder="    최대 50자" maxlength="50" required="" style="margin-top: 30px; background-color:white; height: 40px; border-radius: 4px">
                                 </div>
                                 <div class="mb-3">
                                     <label class="col-form-label createRoomModal_text2">활동 시간</label>
@@ -303,19 +303,19 @@
                                     <div class="row check_margin" style="margin-top:30px; width:150%; margin-right:200px">
                                         <div class="form-check form-check-inline col-auto">
                                             <input class="form-check-input" type="radio" name="active_type" id="online" value="온라인" checked="" hidden>
-                                            <label class="form-check-label createRoomModal_text3" for="online">
+                                            <label class="form-check-label createRoomModal_text3" style="color:#fff; font-weight:bold; width: 130px;" for="online">
                                                 온라인
                                             </label>
                                         </div>
-                                        <div class="form-check form-check-inline  col-auto" style="margin-left:-30px">
+                                        <div class="form-check form-check-inline  col-auto" style="margin-left:-65px">
                                             <input class="form-check-input" type="radio" name="active_type" id="offline" value="오프라인" hidden>
-                                            <label class="form-check-label createRoomModal_text3" for="offline">
+                                            <label class="form-check-label createRoomModal_text3" style="color:#fff; font-weight:bold; width: 130px;" for="offline">
                                                 오프라인
                                             </label>
                                         </div>
-                                        <div class="form-check form-check-inline  col-auto" style="margin-left:-30px">
+                                        <div class="form-check form-check-inline  col-auto" style="margin-left:-50px">
                                             <input class="form-check-input" type="radio" name="active_type" id="blended" value="블렌디드" hidden>
-                                            <label class="form-check-label createRoomModal_text3" for="blended">
+                                            <label class="form-check-label createRoomModal_text3" style="color:#fff; font-weight:bold; width: 130px;" for="blended">
                                                 블렌디드
                                             </label>
                                         </div>
@@ -439,6 +439,7 @@
 <!-- Scripts -->
 <script>
     let checkLogin;
+    let checkRoomId;
 
     function moveMyPage(){
         location.href = "/mypage/" + localStorage.getItem("localId");
@@ -523,6 +524,7 @@
             'hostId':hostId
         };
         $.ajax({
+            async:false,
             type: "POST",
             url: "/api",
             contentType: "application/json",
@@ -530,7 +532,18 @@
             success: function (response) {
                 alert('방이 성공적으로 생성되었습니다.');
                 //window.location.href = "/mypage/" + localStorage.getItem("localId");
+                checkRoomId=response['id'];
             }
+        })
+        $.ajax({
+            async:false,
+            type:"GET",
+            url:`/api/insertHost/${checkRoomId}/${localStorage.getItem('localId')}`,
+            success: function (response){
+                window.location.href = "/memo.html?user=" + checkRoomId;
+
+            }
+
         })
     }
     window.onload=function (){

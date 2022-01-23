@@ -2232,7 +2232,7 @@ input[type="radio"] + label {
 	display: inline-block;
 	font-size: 1em;
 	font-weight: 300;
-	padding-left: 2.55em;
+	padding-left: 2em;
 	padding-right: 0.75em;
 	position: relative;
 }
@@ -2254,7 +2254,7 @@ input[type="radio"] + label:before {
 input[type="checkbox"] + label:before,
 input[type="radio"] + label:before {
 	border-radius: 4px;
-	border: solid 1px #c9c9c9;
+	border: solid 2px #fff;
 	content: '';
 	display: inline-block;
 	font-size: 0.8em;

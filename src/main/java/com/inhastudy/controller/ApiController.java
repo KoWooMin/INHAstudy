@@ -64,4 +64,13 @@ public class ApiController {
         // System.out.println(joinEnd);
         return joinEnd;
     }
+
+    @GetMapping("/api/insertHost/{roomId}/{memberId}")
+    public void insertHost(@PathVariable Long roomId, @PathVariable String memberId){
+        Room room = roomRepository.findById(roomId).orElse(null);
+        SignUp member = signUpRepository.findById(memberId).orElse(null);
+        MemberRoomDto memberRoomDto = new MemberRoomDto(room, member);
+        MemberRoom memberRoom = new MemberRoom(memberRoomDto);
+        memberRoomRepository.save(memberRoom);
+    }
 }
