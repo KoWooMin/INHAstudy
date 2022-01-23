@@ -29,7 +29,7 @@
 이제 입장 버튼을 눌러보세요! [**로그인 후 이용하세요**]라는 창을 마주하셨나요?  
 로그인을 하지 않았다면 스터디 그룹에 입장할 수가 없습니다😭  
 
-<img src="https://user-images.githubusercontent.com/88971743/150679913-776bbb67-e33c-46f3-9812-a248908387ff.png" width="300" height="300"/>  
+<img src="https://user-images.githubusercontent.com/88971743/150679913-776bbb67-e33c-46f3-9812-a248908387ff.png" width="50%" height="50%"/>  
 
 
 로그인 창으로 이동하셨다면 두 가지의 선택지가 있습니다❗  
