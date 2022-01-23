@@ -24,11 +24,11 @@
 <img src="https://user-images.githubusercontent.com/88971743/150680336-5d34d31a-8c77-471c-a012-c4f01cc21278.png" width="200" height="200"/>
 원하는 스터디그룹을 찾았다면 마우스를 올려보세요! 스터디 계획서 버튼과 입장 버튼이 나타납니다😮  
 
-<img src="https://user-images.githubusercontent.com/88971743/150680392-b44e2f9d-e055-4c29-956a-b0ebccbedca2.png" width="50%" height="50%"/>
+<img src="https://user-images.githubusercontent.com/88971743/150680392-b44e2f9d-e055-4c29-956a-b0ebccbedca2.png" width="30%" height="30%"/>
 스터디 계획서 버튼을 누르면 해당 스터디 그룹의 [**모집 기간**], [**활동 기간**], [**활동 유형**], [**카테고리**], [**현재 참여 인원**], [**최대 참여 인원**], [**활동 장소**], [**스터디 횟수**], [**추가 상세 정보**] 를 조회할 수 있습니다❗  
 
 
-<img src="https://user-images.githubusercontent.com/88971743/150680585-0bf440bb-2c1b-40fb-9654-77a4ae94cefe.png" width="30" height="30%"/>
+<img src="https://user-images.githubusercontent.com/88971743/150680585-0bf440bb-2c1b-40fb-9654-77a4ae94cefe.png" width="30%" height="30%"/>
 
 이제 스터디 그룹 참여를 위해 입장 버튼을 눌러보세요! 혹시 [**로그인 후 이용하세요**]라는 창을 마주하셨나요?  
 [**INHA STUDY**] 서비스는 로그인을 하지 않았다면 이용할 수 없습니다😭  
