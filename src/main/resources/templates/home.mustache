@@ -353,6 +353,7 @@
                         <a style="color: #fff">
 
                             <h2>{{roomTitle}}</h2>
+                            <h2 id="roomTitleId{{id}}" style="color: dimgray"></h2>
                             <div class="content">
                                 <p>
                                     <br>모집 기간: {{reStartDate}} ~ {{reEndDate}}
@@ -605,7 +606,18 @@
             error: function (){
                 alert("오류!");
             }
+        })
 
+        $.ajax({
+            type:"GET",
+            url:`/api/checkJoinEnd`,
+            success: function (response){
+                alert(response);
+                for(let i=0;i<response.length;i++){
+                    let a='roomTitleId'+response[i];
+                    document.getElementById(a).innerHTML='<모집마감>'
+                }
+            }
         })
     }
 

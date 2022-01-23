@@ -28,5 +28,8 @@ public class RoomService {
     @Transactional
     public void addCurJoin(Room room) {
         room.addCurJoin();
+        if (room.getCurJoin() == room.getMaxJoin()) {
+            room.updateJoinEnd("Y");
+        }
     }
 }

@@ -3,6 +3,7 @@ package com.inhastudy.controller;
 import com.inhastudy.domain.Room;
 import com.inhastudy.repository.RoomRepository;
 import lombok.RequiredArgsConstructor;
+import org.springframework.data.domain.Sort;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
@@ -18,7 +19,7 @@ public class RoomController {
 
     @GetMapping("/")
     public String home(Model model) {
-        List<Room> roomList = roomRepository.findAll();
+        List<Room> roomList = roomRepository.findAll(Sort.by(Sort.Direction.DESC, "joinEnd"));
         Collections.reverse(roomList);
         model.addAttribute("roomList", roomList);
         return "home";

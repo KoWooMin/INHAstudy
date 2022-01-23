@@ -10,4 +10,7 @@ public interface RoomRepository extends JpaRepository<Room, Long> {
 
     List<Room> findByRoomTitleContainingIgnoreCase(String roomTitle);
     Room findRoomById(Long id);
+
+    @Query(value = "select id from Room where joinEnd='Y'")
+    List<Long> findRoomId();
 }

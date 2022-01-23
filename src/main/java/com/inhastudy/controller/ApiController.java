@@ -57,4 +57,11 @@ public class ApiController {
         System.out.println(roomId);
         return roomId;
     }
+
+    @GetMapping("/api/checkJoinEnd")
+    public List<Long> checkJoinEnd(){
+        List<Long> joinEnd = roomRepository.findRoomId();
+        System.out.println(joinEnd);
+        return joinEnd;
+    }
 }

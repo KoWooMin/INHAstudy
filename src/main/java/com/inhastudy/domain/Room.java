@@ -62,6 +62,9 @@ public class Room {
     @Column(nullable = false)
     private String hostId;
 
+    @ColumnDefault("'N'")
+    private String joinEnd;
+
     public Room(RoomDto requestDto) {
         this.roomTitle = requestDto.getRoomTitle();
         this.reStartDate=requestDto.getReStartDate();
@@ -77,6 +80,7 @@ public class Room {
         this.activeType = requestDto.getActiveType();
         this.info = requestDto.getInfo();
         this.hostId=requestDto.getHostId();
+        this.joinEnd=requestDto.getJoinEnd();
     }
 
     public void update(RoomDto requestDto){
@@ -94,10 +98,15 @@ public class Room {
         this.activeType = requestDto.getActiveType();
         this.info = requestDto.getInfo();
         this.hostId=requestDto.getHostId();
+        this.joinEnd=requestDto.getJoinEnd();
     }
 
     public void addCurJoin(){
         this.curJoin += 1;
+    }
+
+    public void updateJoinEnd(String joinEnd){
+        this.joinEnd = joinEnd;
     }
 
 }

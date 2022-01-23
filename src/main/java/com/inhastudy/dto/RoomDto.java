@@ -26,4 +26,5 @@ public class RoomDto {
     private String activeType;
     private String info;
     private String hostId;
+    private String joinEnd;
 }
