@@ -269,6 +269,7 @@
 
         .card .metadata .username {
             margin-left: 20px;
+            letter-spacing: normal;
         }
 
         .contents {
@@ -386,10 +387,11 @@
             transform: translateX(-50%) translateY(-50%);
         }
         .modal_body_title {
-            color: black;
+            color: #7f9dff;
             text-align: center;
-            font-size: 20px;
+            font-size: 25px;
             font-family: "Noto Sans KR";
+            font-weight: bold;
         }
         .modal_body_sub {
             padding: 0px;
@@ -629,7 +631,7 @@
                 url: `/api/deliverName/${tempId}`,
                 async: false,
                 success: function (response) {
-                    username = response['username'];
+                    username = `${response['major']} ${response['ssn']} ${response['username']}`;
                     return true;
                 }
             })
