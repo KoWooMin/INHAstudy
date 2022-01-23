@@ -209,7 +209,7 @@
                 <button type="button" class="btn btn-outline-primary" id="createRoom" data-bs-toggle="modal" data-bs-whatever="@mdo" onclick="checkLoginCreateRoom()" style="margin-right: 1px;">Create Room
                 </button>
                 <br><br>
-                <input id="localId" type="text">
+                <input id="localId" type="text" hidden>
             </div>
             <div class="modal fade" id="makeRoom" tabindex="-1" aria-labelledby="makeRoomLabel" data-bs-backdrop="static" data-bs-keyboard="false" style="display: none;" aria-hidden="true">
                 <div class="modal-dialog">
@@ -348,7 +348,7 @@
                 {{#roomList}}
                     <article class="style{{category}}">
                                         <span class="image">
-                                            <img src="/images/pic02.jpg" alt="" />
+                                            <img src="/images/pic05.jpg" alt="" />
                                         </span>
                         <a style="color: #fff">
 
@@ -369,7 +369,7 @@
 
                         </a>
                     </article>
-                    <input type="text" id="roomId{{id}}" value="{{id}}"/>
+                    <input type="text" id="roomId{{id}}" value="{{id}}" hidden/>
                 {{/roomList}}
             </section>
 
@@ -547,7 +547,7 @@
                 contentType: "String",
                 success: function (response){
                     if(response === 'Y'){
-                        alert("CheckLogin 정보(Y)를 가져왔습니다.");
+                        // alert("CheckLogin 정보(Y)를 가져왔습니다.");
                         $(`#myPage`).show();
                         checkLogin=response;
                         document.getElementById("switchLogin").innerHTML =
@@ -556,7 +556,7 @@
                     }
                     else{
                         $(`#myPage`).hide();
-                        alert("CheckLogin 정보(N)를 가져왔습니다.")
+                        // alert("CheckLogin 정보(N)를 가져왔습니다.")
                         checkLogin=response;
                         document.getElementById("switchLogin").innerHTML =
                                 '<form class="formLogin" action="login.html" method="GET"> <button class="btn btn-sm">Login</button> </form>'
@@ -565,7 +565,7 @@
                 },
                 error: function (){
                     $(`#myPage`).hide();
-                    alert("CheckLogin 정보를 가져오지 못했습니다.")
+                    // alert("CheckLogin 정보를 가져오지 못했습니다.")
                     checkLogin='N';
                     return false;
                 }
@@ -594,7 +594,7 @@
             type: "GET",
             url: `/api/checkMemberRoom/${localStorage.getItem('localId')}`,
             success: function (response){
-                alert(response);
+                // alert(response);
                 for(let i=0;i<response.length;i++){
                     let a='joinButton'+response[i]
                     document.getElementById(a).innerHTML='들어가기';
@@ -612,7 +612,7 @@
             type:"GET",
             url:`/api/checkJoinEnd`,
             success: function (response){
-                alert(response);
+                // alert(response);
                 for(let i=0;i<response.length;i++){
                     let a='roomTitleId'+response[i];
                     document.getElementById(a).innerHTML='<모집마감>'

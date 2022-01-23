@@ -3,7 +3,7 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=0.65">
     <title>INHA study</title>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
@@ -23,10 +23,11 @@
         .wrap {
             width: 538px;
             margin: 10px auto;
+            padding: 20px;
         }
 
         .schedule-button{
-            width: 180px;
+            width: 170px;
             height: 40px;
             border-radius: 4px;
             background-color: white;
@@ -62,7 +63,7 @@
         }
 
         .user-button{
-            width: 200px;
+            width: 170px;
             height: 40px;
             border-radius: 4px;
             background-color: white;
@@ -98,7 +99,7 @@
         }
 
         .notice-button{
-            width: 100px;
+            width: 140px;
             height: 40px;
             border-radius: 4px;
             background-color: white;
@@ -462,8 +463,8 @@
         function getRoomId(){
             let getLink = window.location.search;
             //alert(getLink);
-            let getRoomId = getLink.split('=');	//getLink를 '='를 기준으로 두 배열 요소로 분리
-            realRoomId = getRoomId[1];	//분리한 배열 중 두번째 요소 변수에 넣기
+            let getRoomId = getLink.split('=');   //getLink를 '='를 기준으로 두 배열 요소로 분리
+            realRoomId = getRoomId[1];   //분리한 배열 중 두번째 요소 변수에 넣기
         }
 
         // 사용자가 내용을 올바르게 입력하였는지 확인합니다.
@@ -779,8 +780,8 @@
                     $('.modal_body_sub').append(temphtml);
                     for(let i=0;i<response.length; i++){
                         if(response[i]['id'] === hostId){
-                            let temphtmlInfo = `<div class="left">${response[i]['ssn']}</div>
-                                    <div class="right">${response[i]['username']} [방장]</div>`;
+                            let temphtmlInfo = `<div class="left" style="color: #7f9dff; font-weight: bold">${response[i]['ssn']}</div>
+                                    <div class="right" style="color: #7f9dff; font-weight: bold">${response[i]['username']} [방장]</div>`;
                             $('.modal_body_sub').append(temphtmlInfo);
                         }
                         else {

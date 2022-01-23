@@ -154,7 +154,7 @@
                 <br>
                 <h3> 내가 속한 스터디룸 </h3>
             </div>
-            <input type="text" id="userId" value="null"/>
+            <input type="text" id="userId" value="null" hidden/>
 
             <section class="tiles" style="margin-top: 0px;">
                 {{#roomList}}
@@ -181,7 +181,7 @@
 
                         </a>
                     </article>
-                    <input type="text" id="roomId{{id}}" value="{{id}}"/>
+                    <input type="text" id="roomId{{id}}" value="{{id}}" hidden/>
 
                 {{/roomList}}
             </section>

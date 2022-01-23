@@ -54,14 +54,14 @@ public class ApiController {
     @GetMapping("/api/checkMemberRoom/{memberId}")
     public List<Long> checkMemberRoom(@PathVariable String memberId){
         List<Long> roomId = memberRoomRepository.findRoomId(memberId);
-        System.out.println(roomId);
+        // System.out.println(roomId);
         return roomId;
     }
 
     @GetMapping("/api/checkJoinEnd")
     public List<Long> checkJoinEnd(){
         List<Long> joinEnd = roomRepository.findRoomId();
-        System.out.println(joinEnd);
+        // System.out.println(joinEnd);
         return joinEnd;
     }
 }
