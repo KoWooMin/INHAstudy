@@ -455,17 +455,20 @@
     function checkLoginJoin(roomId){
         if (checkLogin === 'Y') {
             $.ajax({
+                async:false,
                 type: "PUT",
                 url: `/api/addCurJoin/${roomId}`,
                 success: function (response) {
                 }
             })
             $.ajax({
+                async:false,
                 type: "GET",
                 url: `/api/insertRoomId/${roomId}/${localStorage.getItem('localId')}`,
                 success: function (response) {
                 }
             })
+
             window.location.href = "/memo.html?roomId=" + roomId;
         }else {
             alert("로그인 후 이용해주세요");

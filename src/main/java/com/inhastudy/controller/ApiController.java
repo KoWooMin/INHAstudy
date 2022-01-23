@@ -13,6 +13,8 @@ import com.inhastudy.service.SignUpService;
 import lombok.RequiredArgsConstructor;
 import org.springframework.web.bind.annotation.*;
 
+import java.util.List;
+
 @RequiredArgsConstructor
 @RestController
 public class ApiController {
@@ -32,7 +34,11 @@ public class ApiController {
     public void addCurJoin(@PathVariable Long roomId){
 
         Room room = roomRepository.findById(roomId).orElse(null);
-        roomService.addCurJoin(room);
+        Integer curJoin = room.getCurJoin();
+        Integer maxJoin = room.getMaxJoin();
+        if(curJoin<maxJoin){
+            roomService.addCurJoin(room);
+        }
     }
 
     @GetMapping("/api/insertRoomId/{roomId}/{memberId}")
@@ -43,4 +49,6 @@ public class ApiController {
         MemberRoom memberRoom = new MemberRoom(memberRoomDto);
         memberRoomRepository.save(memberRoom);
     }
+
+
 }

@@ -22,4 +22,6 @@ public interface MemberRoomRepository extends JpaRepository<MemberRoom, Long> {
 
     @Query(value = "select T.member from MemberRoom as T where T.member.id = :memberId")
     SignUp findMemberByMemberId(@Param("memberId") String memberId);
+
+
 }
