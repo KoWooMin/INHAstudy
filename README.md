@@ -46,14 +46,15 @@
 <img src="https://user-images.githubusercontent.com/88971743/150681378-798bef32-c760-428c-9e8d-41e447a0cbe2.png" width="30%" height="30%"/></br>
 방금 회원가입한 계정으로 로그인을 해주세요🤗</br></br>
 
-<img src="https://user-images.githubusercontent.com/88971743/150680004-14b12731-fe1c-4132-8aba-e2793a8fc793.png" width="30%" height="30%"></img></br>
-이런 본인이 원하는 스터디 그룹이 없나요?🤔 걱정하지 마세요❗ 회원이 직접 스터디 그룹을 생성할 수도 있습니다.</br>
-[**CREATE ROOM**]버튼을 클릭하면 위와 같은 창을 볼 수 있습니다. 원하는 정보를 기입한 후에 방을 생성해주세요.</br>
 
 <img src="https://user-images.githubusercontent.com/88971743/150682287-c837ba9a-c001-4550-9df7-6cf7f2b91fd2.png" width="30%" height="30%"></img></br>
-위 사진처럼 정보를 전부 입력했다면 생성 버튼을 클릭해주세요. 이후 들어가기 버튼을 통해 방에 입장해주세요.</br></br>
+이런 본인이 원하는 스터디 그룹이 없나요?🤔 걱정하지 마세요❗ 회원이 직접 스터디 그룹을 생성할 수도 있습니다.</br>
+[**CREATE ROOM**]버튼을 클릭하면 위와 같은 창을 볼 수 있습니다. 원하는 정보를 기입한 후에 방을 생성해주세요.</br>
+방이 생성되었다면 들어가기 버튼을 통해 방에 입장해주세요😀</br></br>
 
 <img src="https://user-images.githubusercontent.com/88971743/150682414-3ac688e4-2879-4efe-8e29-986badba308a.png" width="30%" height="30%"></img></br>
+이 페이지가 바로 스터디 그룹원끼리 소통을 나누게 될 곳입니다❗🤗</br>
+이 곳에서는 화면에 보이는 것처럼 [**스터디 계획서 조회**], [**일반 메모 및 공지 메모 작성**], [**참여자 목록 조회**]가 가능합니다!
 
 ![image](https://user-images.githubusercontent.com/88971743/150680104-d4f54c0f-1913-4614-94b5-38320df825e5.png)
 
