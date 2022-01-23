@@ -1,5 +1,6 @@
 package com.inhastudy.domain;
 
+import com.inhastudy.dto.MemberRoomDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -26,4 +27,8 @@ public class MemberRoom {
     @JoinColumn(name = "roomId")
     private Room room;
 
+    public MemberRoom(MemberRoomDto memberRoomDto) {
+        this.member = memberRoomDto.getMember();
+        this.room = memberRoomDto.getRoom();
+    }
 }

@@ -102,7 +102,7 @@
 
     .studyPlanModal_text1{
         font-size: 30px;
-        color: black;
+        color: lightslategray;
         font-family: 'Noto Sans KR', sans-serif;
         margin: auto;
     }
@@ -159,7 +159,7 @@
             <section class="tiles" style="margin-top: 0px;">
                 {{#roomList}}
 
-                    <article class="style{{category}}스터디">
+                    <article class="style{{category}}">
                                         <span class="image">
                                             <img src="/images/pic02.jpg" alt="" />
                                         </span>
@@ -172,10 +172,10 @@
                                     <br>활동 장소: {{location}}
                                     <br>( {{curJoin}} / {{maxJoin}} )
                                 </p>
-                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" data-bs-toggle="modal" data-bs-target="#studyPlan{{id}}"
+                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff; box-shadow: inset 0 0 0 2px #fff;" data-bs-toggle="modal" data-bs-target="#studyPlan{{id}}"
                                         data-bs-whatever="@mdo">스터디계획서
                                 </button>
-                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff;" onclick="checkLoginJoin({{id}})">가입신청
+                                <button type="button" class="btn btn-primary" style="background-color:transparent; border-color: #fff; box-shadow: inset 0 0 0 2px #fff;" onclick="checkLoginJoin({{id}})">들어가기
                                 </button>
                             </div>
 
@@ -191,7 +191,7 @@
                     <div class="modal-dialog">
                         <div class="modal-content studyPlanModal_background">
                             <div class="modal-header">
-                                <h5 class="modal-title studyPlanModal_text1" id="studyPlanLabel">* 스터디 계획서 *</h5>
+                                <h5 class="modal-title studyPlanModal_text1" id="studyPlanLabel">*스터디 계획서*</h5>
                             </div>
                             <div class="modal-body">
 
@@ -235,7 +235,7 @@
                                 </form>
 
                                 <div class="modal-footer">
-                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">닫기</button>
+                                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal" style="font-weight:bold; height:50px; box-shadow: inset 0 0 0 2px #fff; padding-right:8px">닫기</button>
                                 </div>
                             </div>
                         </div>
