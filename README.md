@@ -22,7 +22,7 @@
 메인 페이지의 [**상단**]에는 [**타이틀**]과 [**로그인**], [**로그아웃**], [**방 생성**]을 할 수 있는 버튼, [**검색**]을 할 수 있는 공간 있습니다🎇</br>
 만약 하단의 [**카드 박스**]에서 자신이 원하는 주제의 스터디그룹을 찾고 싶다면 검색 버튼에서 검색어를 입력하면 해당 단어를 포함하는 스터디 그룹을 찾을 수 있습니다🤗</br></br></br>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150680336-5d34d31a-8c77-471c-a012-c4f01cc21278.png" width="30%" height="30%"></p>
+
 다시 [__하단__]으로 돌아와서 원하는 스터디그룹을 선택하여 마우스를 올려보세요! [__스터디 계획서__]와 [**가입 신청**] 버튼이 나타납니다😮</br></br></br>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150680392-b44e2f9d-e055-4c29-956a-b0ebccbedca2.png" width="30%" height="30%"></img></p>
