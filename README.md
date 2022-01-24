@@ -13,7 +13,9 @@
 ### 🙋‍♂️ 메인 페이지</br>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150752703-e1996ab5-bb50-4527-801a-99304dd2f199.png" width="65%" height="65%"></img></p>
-메인 페이지에서는 위와 같이 기존에 생성되어 있는 스터디그룹의 목록이 나타납니다😮</br>
+메인 페이지에서는 위와 같이 기존에 생성되어 있는 스터디 그룹을 의미하는 여러장의 카드박스가 나타납니다😮</br></br></br>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150755308-5fb95cf9-aeb3-4e8c-92bc-f23466435773.png" width="65%" height="65%"></img></p>
 자신이 원하는 주제의 스터디그룹을 찾고 싶다면 검색 버튼에서 키워드를 입력하면 됩니다🤗</br></br></br>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150680336-5d34d31a-8c77-471c-a012-c4f01cc21278.png" width="30%" height="30%"></img></p>
