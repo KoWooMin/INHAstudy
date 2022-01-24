@@ -15,7 +15,7 @@
 ## 🔥 [INHA STUDY] 서비스 소개
 ### 🙋‍♂️ 메인 페이지</br>
 
-<img src="https://user-images.githubusercontent.com/88971743/150752703-e1996ab5-bb50-4527-801a-99304dd2f199.png" width="50%" height="50%"></img></br>
+<img src="https://user-images.githubusercontent.com/88971743/150752703-e1996ab5-bb50-4527-801a-99304dd2f199.png" width="65%" height="65%"></img></br>
 메인 페이지에서는 위와 같이 기존에 생성되어 있는 스터디그룹의 목록이 나타납니다😮      
 
 자신이 원하는 주제의 스터디그룹을 찾고 싶다면 검색 버튼에서 키워드를 입력하면 됩니다🤗</br></br>
