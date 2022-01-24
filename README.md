@@ -91,4 +91,4 @@
 
 
 ## 🔥 개발 언어 및 프레임워크</br>
-<svg role="img" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"></svg>
+<img alt="Python" src ="https://img.shields.io/badge/Python-3776AB.svg?&style=for-the-badge&logo=Python&logoColor=white"/>
