@@ -37,6 +37,7 @@
 
 ### 🙋‍♂️ 로그인 페이지</br>
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150679913-776bbb67-e33c-46f3-9812-a248908387ff.png" width="30%" height="30%"></img></p>
+
 로그인 창으로 이동하셨다면 **2개**의 선택지가 있습니다❗</br>
 1️⃣ 자신이 회원가입이 되어 있다면 바로 ID와 비밀번호를 입력하여 로그인을 진행하면 됩니다❗</br>
 2️⃣ 기존 회원이 아니라면 [**회원가입**] 버튼을 눌러 회원가입을 진행하러 갑니다😀</br></br></br>
@@ -59,7 +60,15 @@
 ### 🙋‍♂️ 스터디 룸 페이지</br>
 <img src="https://user-images.githubusercontent.com/88971743/150682414-3ac688e4-2879-4efe-8e29-986badba308a.png" width="40%" height="40%"></img></br>
 이 페이지가 바로 스터디 그룹원끼리 소통을 나누게 될 공간입니다❗🤗</br>
-이 곳에서는 화면에 보이는 것처럼 [**스터디 계획서 조회**], [**일반 메모 및 공지 메모 작성**], [**참여자 목록 조회**]가 가능합니다!</br></br>
+이 곳에서는 화면에 보이는 것처럼 [**스터디 계획서 조회**], [**일반 메모 및 공지 메모 작성**], [**참여자 목록 조회**]가 가능합니다!</br></br></br>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150764786-5945bb1c-7bec-4f31-b22b-917670f8e434.png" width="30%" height="30%"></img></p>
+
+[**스터디 계획서**] 버튼을 누르면 위와 같이 해당 스터디 그룹의 계획서를 조회할 수 있습니다.</br></br></br>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150765172-2f6bfb60-3ba2-40a2-b24b-2bd235fb0eae.png" width="30%" height="30%"></img></p>
+
+[**참여자 목록**] 버튼을 누르면 해당 스터디 그룹에 참여한 사람들을 조회할 수 있습니다. 이때 스터디 그룹을 생성한 사람은 이름 옆에 [**방장**]표시가 생깁니다😀</br></br></br>
 
 <img src="https://user-images.githubusercontent.com/88971743/150682917-6b9fba9c-f9c8-471a-8be6-f7b625fee0ce.png" width="40%" height="40%"></img></br>
 위 처럼 하얗게 나타는 메모는 [**일반 메모**]이고 붉은 색으로 나타는 메모는 [**공지 메모**]입니다. 두 메모 모두 수정과 삭제가 가능합니다😀</br>
