@@ -68,7 +68,8 @@
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150765172-2f6bfb60-3ba2-40a2-b24b-2bd235fb0eae.png" width="30%" height="30%"></img></p>
 
-[**참여자 목록**] 버튼을 누르면 해당 스터디 그룹에 참여한 사람들을 조회할 수 있습니다. 이때 스터디 그룹을 생성한 사람은 이름 옆에 [**방장**]표시가 생깁니다😀</br></br></br>
+[**참여자 목록**] 버튼을 누르면 해당 스터디 그룹에 참여한 사람들을 조회할 수 있습니다.</br>
+이때 스터디 그룹을 생성한 사람은 이름 옆에 [**방장**]표시가 생깁니다😀</br></br></br>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150682917-6b9fba9c-f9c8-471a-8be6-f7b625fee0ce.png" width="40%" height="40%"></img></p></br>
 위 처럼 하얗게 나타는 메모는 [**일반 메모**]이고 붉은 색으로 나타는 메모는 [**공지 메모**]입니다. 두 메모 모두 수정과 삭제가 가능합니다😀</br>
