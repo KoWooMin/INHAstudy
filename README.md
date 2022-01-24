@@ -14,7 +14,7 @@
 #### ✔️메인 페이지 [하단]</br>
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150752703-e1996ab5-bb50-4527-801a-99304dd2f199.png" width="65%" height="65%"></img></p>
 
-메인 페이지의 [**하단**]부터 먼저 살펴볼까요?☝️ 메인 페이지의 하단 부분은 위와 같이 기존에 생성되어 있는 스터디 그룹을 의미하는 여러장의 카드박스가 나타납니다😮</br></br></br>
+메인 페이지의 [**하단**]부터 먼저 살펴볼까요?☝️ 메인 페이지의 하단 부분은 위와 같이 기존에 생성되어 있는 스터디 그룹을 의미하는 여러장의 카드박스가 나타납니다😮</br></br>
 
 #### ✔️메인 페이지 [**상단**]</br>
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150755308-5fb95cf9-aeb3-4e8c-92bc-f23466435773.png" width="65%" height="65%"></img></p>
