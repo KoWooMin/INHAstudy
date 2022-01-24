@@ -25,6 +25,7 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150680336-5d34d31a-8c77-471c-a012-c4f01cc21278.png" width="30%" height="30%"></img></p>
 다시 [__하단__]으로 돌아와서 원하는 스터디그룹을 선택하여 마우스를 올려보세요! [__스터디 계획서__]와 [**가입 신청**] 버튼이 나타납니다😮</br></br></br>
 
+<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150680392-b44e2f9d-e055-4c29-956a-b0ebccbedca2.png" width="30%" height="30%"></img></p>
 [**스터디 계획서**] 버튼을 누르면 해당 스터디 그룹의 [**모집 기간**], [**활동 기간**], [**활동 유형**], [**카테고리**], [**현재 참여 인원**], [**최대 참여 인원**], [**활동 장소**], [**스터디 횟수**], [**추가 상세 정보**] 를 조회할 수 있습니다❗</br></br></br>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150680585-0bf440bb-2c1b-40fb-9654-77a4ae94cefe.png" width="40%" height="40%"></img></p>
