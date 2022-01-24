@@ -25,21 +25,21 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150680336-5d34d31a-8c77-471c-a012-c4f01cc21278.png" width="30%" height="30%"></img></p>
 다시 [**하단**]으로 돌아와서 원하는 스터디그룹을 선택하여 마우스를 올려보세요! [**스터디 계획서**]와 [**가입 신청**] 버튼이 나타납니다😮</br></br></br>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150680392-b44e2f9d-e055-4c29-956a-b0ebccbedca2.png" width="30%" height="30%"></img></p></br>
+<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150680392-b44e2f9d-e055-4c29-956a-b0ebccbedca2.png" width="30%" height="30%"></img></p>
 [**스터디 계획서**] 버튼을 누르면 해당 스터디 그룹의 [**모집 기간**], [**활동 기간**], [**활동 유형**], [**카테고리**], [**현재 참여 인원**], [**최대 참여 인원**], [**활동 장소**], [**스터디 횟수**], [**추가 상세 정보**] 를 조회할 수 있습니다❗</br></br></br>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150680585-0bf440bb-2c1b-40fb-9654-77a4ae94cefe.png" width="40%" height="40%"></img></p>
 이제 스터디 그룹 참여를 위해 [**가입 신청**] 버튼을 눌러보세요! 혹시 [**로그인 후 이용해주세요**]라는 창을 마주하셨나요?</br>
-[**INHA STUDY**] 서비스는 로그인을 하지 않았다면 이용할 수 없습니다😭 서비스를 이용하기 위해 **로그인**하러 이동해보겠습니다!</br></br>
+[**INHA STUDY**] 서비스는 로그인을 하지 않았다면 이용할 수 없습니다😭 이제 서비스를 이용하기 위해 **로그인**하러 이동해보겠습니다!</br></br></br>
 
 ### 🙋‍♂️ 로그인 페이지</br>
-<img src="https://user-images.githubusercontent.com/88971743/150679913-776bbb67-e33c-46f3-9812-a248908387ff.png" width="30%" height="30%"></img></br>
+<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150679913-776bbb67-e33c-46f3-9812-a248908387ff.png" width="30%" height="30%"></img></p>
 로그인 창으로 이동하셨다면 **2개**의 선택지가 있습니다❗</br>
 1️⃣ 자신이 회원가입이 되어 있다면 바로 ID와 비밀번호를 입력하여 로그인을 진행하면 됩니다❗</br>
-2️⃣ 기존 회원이 아니라면 [**회원가입**] 버튼을 눌러 회원가입을 진행하러 갑니다😀</br></br>
+2️⃣ 기존 회원이 아니라면 [**회원가입**] 버튼을 눌러 회원가입을 진행하러 갑니다😀</br></br></br>
 
 ### 🙋‍♂️ 회원가입 페이지</br>
-<img src="https://user-images.githubusercontent.com/88971743/150681084-aff61427-d6c1-4402-b825-2c55d710126b.png" width="30%" height="30%"/> <img src="https://user-images.githubusercontent.com/88971743/150681251-cf11578d-de99-479a-aae3-c4a4fb042179.png" width="30.5%" height="30.5%"/></br>
+<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150681084-aff61427-d6c1-4402-b825-2c55d710126b.png" width="30%" height="30%"/> <img src="https://user-images.githubusercontent.com/88971743/150681251-cf11578d-de99-479a-aae3-c4a4fb042179.png" width="30.5%" height="30.5%"/></p>
 위 사진은 회원 가입 페이지입니다. 빈칸에 알맞은 정보를 입력하고 회원 가입 버튼을 누르면 계정 생성에 성공합니다🤗</br>
 중복된 아이디는 허용하지 않습니다❗❗</br>
 
