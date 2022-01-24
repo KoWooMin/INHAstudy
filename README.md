@@ -46,7 +46,7 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150681084-aff61427-d6c1-4402-b825-2c55d710126b.png" width="30%" height="30%"/> <img src="https://user-images.githubusercontent.com/88971743/150681251-cf11578d-de99-479a-aae3-c4a4fb042179.png" width="30.5%" height="30.5%"/></p>
 
 위 사진은 회원 가입 페이지입니다. 빈칸에 알맞은 정보를 입력하고 회원 가입 버튼을 누르면 계정 생성에 **성공**합니다🤗</br>
-단, 중복된 아이디는 허용하지 않습니다❗❗</br>
+단, 중복된 아이디는 허용하지 않습니다❗❗</br></br></br>
 
 #### ✔️회원가입에 성공했다면 해당 계정으로 계속해서 진행해주세요!</br>
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150681378-798bef32-c760-428c-9e8d-41e447a0cbe2.png" width="30%" height="30%"/></p></br>
@@ -78,3 +78,6 @@
 
 위 처럼 하얗게 나타는 메모는 [**일반 메모**]이고 붉은 색으로 나타는 메모는 [**공지 메모**]입니다. 두 메모 모두 수정과 삭제가 가능합니다😀</br>
 만약 공지를 보기 싫다면 상단의 [**공지 숨기기**]버튼을 통해 공지를 숨길 수 있습니다❗
+
+### 🙋‍♂️ 마이 페이지</br>
+마지막으로 소개할 부분은 [**마이 페이지**]입니다!
