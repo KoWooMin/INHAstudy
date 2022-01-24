@@ -30,7 +30,7 @@
 
 [**스터디 계획서**] 버튼을 누르면 해당 스터디 그룹의 [**모집 기간**], [**활동 기간**], [**활동 유형**], [**카테고리**], [**현재 참여 인원**], [**최대 참여 인원**], [**활동 장소**], [**스터디 횟수**], [**추가 상세 정보**] 를 조회할 수 있습니다❗</br></br></br>
 
-<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150680585-0bf440bb-2c1b-40fb-9654-77a4ae94cefe.png" width="40%" height="40%"></img></p>
+<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150762103-41584363-4a6d-40da-b521-ea76076c73b0.png" width="40%" height="40%"></img></p>
 
 이제 스터디 그룹 참여를 위해 [**가입 신청**] 버튼을 눌러보세요! 혹시 [**로그인 후 이용해주세요**]라는 창을 마주하셨나요?</br>
 [**INHA STUDY**] 서비스는 로그인을 하지 않았다면 이용할 수 없습니다😭 이제 서비스를 이용하기 위해 **로그인**하러 이동해보겠습니다!</br></br></br>
@@ -43,22 +43,22 @@
 
 ### 🙋‍♂️ 회원가입 페이지</br>
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150681084-aff61427-d6c1-4402-b825-2c55d710126b.png" width="30%" height="30%"/> <img src="https://user-images.githubusercontent.com/88971743/150681251-cf11578d-de99-479a-aae3-c4a4fb042179.png" width="30.5%" height="30.5%"/></p>
-위 사진은 회원 가입 페이지입니다. 빈칸에 알맞은 정보를 입력하고 회원 가입 버튼을 누르면 계정 생성에 성공합니다🤗</br>
-중복된 아이디는 허용하지 않습니다❗❗</br>
+
+위 사진은 회원 가입 페이지입니다. 빈칸에 알맞은 정보를 입력하고 회원 가입 버튼을 누르면 계정 생성에 **성공**합니다🤗</br>
+단, 중복된 아이디는 허용하지 않습니다❗❗</br>
 
 #### ✔️회원가입에 성공했다면 해당 계정으로 계속해서 진행해주세요!</br>
 <img src="https://user-images.githubusercontent.com/88971743/150681378-798bef32-c760-428c-9e8d-41e447a0cbe2.png" width="30%" height="30%"/></br>
-방금 회원가입한 계정으로 로그인을 해주세요🤗</br></br>
-
+방금 회원가입한 계정으로 **로그인**을 해주세요🤗</br></br></br>
 
 <img src="https://user-images.githubusercontent.com/88971743/150682287-c837ba9a-c001-4550-9df7-6cf7f2b91fd2.png" width="30%" height="30%"></img></br>
 이런 본인이 원하는 스터디 그룹이 없나요?🤔 걱정하지 마세요❗ 회원이 직접 스터디 그룹을 생성할 수도 있습니다.</br>
-[**CREATE ROOM**]버튼을 클릭하면 위와 같은 창을 볼 수 있습니다. 원하는 정보를 기입한 후에 방을 생성해주세요.</br>
-방이 생성되었다면 들어가기 버튼을 통해 방에 입장해주세요😀</br></br>
+[**CREATE ROOM**]버튼을 클릭하면 위와 같은 창을 볼 수 있습니다. 자신이 원하는 정보를 기입한 후 스터디 그룹을 생성해주세요.</br>
+스터디 그룹 생성에 성공했다면 자동으로 입장된답니다!😀</br></br></br>
 
 ### 🙋‍♂️ 스터디 룸 페이지</br>
 <img src="https://user-images.githubusercontent.com/88971743/150682414-3ac688e4-2879-4efe-8e29-986badba308a.png" width="40%" height="40%"></img></br>
-이 페이지가 바로 스터디 그룹원끼리 소통을 나누게 될 곳입니다❗🤗</br>
+이 페이지가 바로 스터디 그룹원끼리 소통을 나누게 될 공간입니다❗🤗</br>
 이 곳에서는 화면에 보이는 것처럼 [**스터디 계획서 조회**], [**일반 메모 및 공지 메모 작성**], [**참여자 목록 조회**]가 가능합니다!</br></br>
 
 <img src="https://user-images.githubusercontent.com/88971743/150682917-6b9fba9c-f9c8-471a-8be6-f7b625fee0ce.png" width="40%" height="40%"></img></br>
