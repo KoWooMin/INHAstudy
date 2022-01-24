@@ -50,15 +50,18 @@
 
 #### ✔️회원가입에 성공했다면 해당 계정으로 계속해서 진행해주세요!</br>
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150681378-798bef32-c760-428c-9e8d-41e447a0cbe2.png" width="30%" height="30%"/></p></br>
+
 방금 회원가입한 계정으로 **로그인**을 해주세요🤗</br></br></br>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150682287-c837ba9a-c001-4550-9df7-6cf7f2b91fd2.png" width="30%" height="30%"></img></p></br>
+
 이런 본인이 원하는 스터디 그룹이 없나요?🤔 걱정하지 마세요❗ 회원이 직접 스터디 그룹을 생성할 수도 있습니다.</br>
 [**CREATE ROOM**]버튼을 클릭하면 위와 같은 창을 볼 수 있습니다. 자신이 원하는 정보를 기입한 후 스터디 그룹을 생성해주세요.</br>
 스터디 그룹 생성에 성공했다면 자동으로 입장된답니다!😀</br></br></br>
 
 ### 🙋‍♂️ 스터디 룸 페이지</br>
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150682414-3ac688e4-2879-4efe-8e29-986badba308a.png" width="40%" height="40%"></img></p></br>
+
 이 페이지가 바로 스터디 그룹원끼리 소통을 나누게 될 공간입니다❗🤗</br>
 이 곳에서는 화면에 보이는 것처럼 [**스터디 계획서 조회**], [**일반 메모 및 공지 메모 작성**], [**참여자 목록 조회**]가 가능합니다!</br></br></br>
 
@@ -72,5 +75,6 @@
 이때 스터디 그룹을 생성한 사람은 이름 옆에 [**방장**]표시가 생깁니다😀</br></br></br>
 
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150682917-6b9fba9c-f9c8-471a-8be6-f7b625fee0ce.png" width="40%" height="40%"></img></p></br>
+
 위 처럼 하얗게 나타는 메모는 [**일반 메모**]이고 붉은 색으로 나타는 메모는 [**공지 메모**]입니다. 두 메모 모두 수정과 삭제가 가능합니다😀</br>
 만약 공지를 보기 싫다면 상단의 [**공지 숨기기**]버튼을 통해 공지를 숨길 수 있습니다❗
