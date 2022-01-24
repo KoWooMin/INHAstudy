@@ -77,7 +77,17 @@
 <p align="center"><img src="https://user-images.githubusercontent.com/88971743/150682917-6b9fba9c-f9c8-471a-8be6-f7b625fee0ce.png" width="40%" height="40%"></img></p></br>
 
 위 처럼 하얗게 나타는 메모는 [**일반 메모**]이고 붉은 색으로 나타는 메모는 [**공지 메모**]입니다. 두 메모 모두 수정과 삭제가 가능합니다😀</br>
-만약 공지를 보기 싫다면 상단의 [**공지 숨기기**]버튼을 통해 공지를 숨길 수 있습니다❗
+만약 공지를 보기 싫다면 상단의 [**공지 숨기기**]버튼을 통해 공지를 숨길 수 있습니다❗</br></br></br>
 
 ### 🙋‍♂️ 마이 페이지</br>
-마지막으로 소개할 부분은 [**마이 페이지**]입니다!
+<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150767967-8481fe49-b633-455e-95e6-db143526c5b1.png" width="30%" height="30%"></img></p>
+
+마지막으로 소개할 부분은 [**마이 페이지**]입니다! 마이 페이지는 메인 페이지에서 위와 같은 버튼을 눌러 입장할 수 있습니다.</br></br></br>
+
+<p align="center"><img src="https://user-images.githubusercontent.com/88971743/150769150-0f561164-263b-4692-b284-a43dc9d18d4d.png" width="30%" height="30%"></img></p>
+
+[**마이 페이지**]에서는 본인이 속한 스터디 그룹의 목록을 확인할 수 있습니다❗🤗</br>
+본인이 속한 스터디 그룹을 메인 페이지에서 직접 찾는 수고를 덜어줄 수 있습니다!</br></br></br>
+
+
+## 🔥 개발 언어 및 프레임워크</br>
