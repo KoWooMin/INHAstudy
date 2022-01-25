@@ -102,5 +102,5 @@
 <p align="center"><img src="https://img.shields.io/badge/-JavaScript-%23F7DF1E" width="140" height="60">     <img src="https://img.shields.io/badge/-HTML5-%23E34F26" width="140" height="60">     <img src="https://img.shields.io/badge/-CSS3-%231572B6" width="140" height="60"></p></br>
 
 저희 InhaStudy팀은 프론트엔드 개발을 진행할 때❗</br>
-**JavaScript**, **CSS**, **HTML**을 이용하였습니다!</br></br></br>
+**JavaScript**, **HTML**, **CSS**을 이용하였습니다!</br></br></br>
 
