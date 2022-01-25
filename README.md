@@ -91,5 +91,5 @@
 
 
 ## 🔥 개발 언어 및 프레임워크</br>
-<img src="https://img.shields.io/badge/-Java-%23007396">
+<img src="https://img.shields.io/badge/-Java-%23007396" width="10%" height="10%">
 
