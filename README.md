@@ -91,9 +91,9 @@
 
 
 ## 🔥 개발 언어 및 프레임워크</br>
-<img src="https://img.shields.io/badge/-Java-%23007396" width="60" height="35">
-<img src="https://img.shields.io/badge/-JavaScript-%23F7DF1E" width="10%" height="10%">
-<img src="https://img.shields.io/badge/-HTML5-%23E34F26" width="10%" height="10%">
-<img src="https://img.shields.io/badge/-CSS3-%231572B6" width="10%" height="10%">
-<img src="https://img.shields.io/badge/-Spring-%236DB33F" width="10%" height="10%">
-<img src="" width="10%" height="10%">
+<img src="https://img.shields.io/badge/-Java-%23007396" width="120" height="70">
+<img src="https://img.shields.io/badge/-JavaScript-%23F7DF1E" width="120" height="70">
+<img src="https://img.shields.io/badge/-HTML5-%23E34F26" width="120" height="70">
+<img src="https://img.shields.io/badge/-CSS3-%231572B6" width="120" height="70">
+<img src="https://img.shields.io/badge/-Spring-%236DB33F" width="120" height="70">
+<img src="https://img.shields.io/badge/-IntelliJ%20IDEA-%23000000" width="120" height="70">
