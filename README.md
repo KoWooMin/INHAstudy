@@ -91,9 +91,16 @@
 
 
 ## 🔥 개발 언어 및 프레임워크</br>
-<img src="https://img.shields.io/badge/-Java-%23007396" width="120" height="70">
-<img src="https://img.shields.io/badge/-JavaScript-%23F7DF1E" width="120" height="70">
-<img src="https://img.shields.io/badge/-HTML5-%23E34F26" width="120" height="70">
-<img src="https://img.shields.io/badge/-CSS3-%231572B6" width="120" height="70">
-<img src="https://img.shields.io/badge/-Spring-%236DB33F" width="120" height="70">
-<img src="https://img.shields.io/badge/-IntelliJ%20IDEA-%23000000" width="120" height="70">
+#### ✔️백엔드
+<p align="center"><img src="https://img.shields.io/badge/-IntelliJ%20IDEA-%23000000" width="140" height="60">     <img src="https://img.shields.io/badge/-Spring-%236DB33F" width="140" height="60">     <img src="https://img.shields.io/badge/-Java-%23007396" width="140" height="60"></p></br>
+
+저희 InhaStudy팀은 백엔드 개발을 진행할 때❗</br>
+**인텔리제이** IDE를 이용하여 **Spring** 프레임워크를 사용하였으며 **Java** 언어로 개발을 진행하였습니다!</br></br></br>
+
+
+#### ✔️프론트엔드
+<p align="center"><img src="https://img.shields.io/badge/-JavaScript-%23F7DF1E" width="140" height="60">     <img src="https://img.shields.io/badge/-HTML5-%23E34F26" width="140" height="60">     <img src="https://img.shields.io/badge/-CSS3-%231572B6" width="140" height="60"></p></br>
+
+저희 InhaStudy팀은 프론트엔드 개발을 진행할 때❗</br>
+**JavaScript**, **CSS**, **HTML**을 이용하였습니다!</br></br></br>
+
