@@ -1,6 +1,7 @@
 package com.inhastudy.domain;
 
 import com.inhastudy.dto.RoomDto;
+import com.inhastudy.dto.SignUpRequestDto;
 import lombok.AllArgsConstructor;
 import lombok.Getter;
 import lombok.NoArgsConstructor;
@@ -77,6 +78,28 @@ public class Room {
         this.info = requestDto.getInfo();
         this.hostId=requestDto.getHostId();
     }
+
+    public void update(RoomDto requestDto){
+        this.roomTitle = requestDto.getRoomTitle();
+        this.reStartDate=requestDto.getReStartDate();
+        this.reEndDate = requestDto.getReEndDate();
+        this.category = requestDto.getCategory();
+        this.curJoin = requestDto.getCurJoin();
+        this.maxJoin = requestDto.getMaxJoin();
+        this.acStartDate = requestDto.getAcStartDate();
+        this.acEndDate = requestDto.getAcEndDate();
+        this.location = requestDto.getLocation();
+        this.studyCount= requestDto.getStudyCount();
+        this.studyTime = requestDto.getStudyTime();
+        this.activeType = requestDto.getActiveType();
+        this.info = requestDto.getInfo();
+        this.hostId=requestDto.getHostId();
+    }
+
+    public void addCurJoin(){
+        this.curJoin += 1;
+    }
+
 }
 
 

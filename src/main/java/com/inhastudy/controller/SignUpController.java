@@ -90,7 +90,11 @@ public class SignUpController {
 
     @GetMapping("/api/deliverId/{inputId}")
     public String deliverId(@PathVariable String inputId){
-
         return "/home";
+    }
+
+    @GetMapping("/api/deliverName/{inputId}")
+    public SignUp deliverName(@PathVariable String inputId){
+        return signupRepository.findSignUpById(inputId);
     }
 }

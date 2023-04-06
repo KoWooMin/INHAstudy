@@ -44,9 +44,8 @@ public class RoomController {
     @GetMapping("/home/search")
     public String search(@RequestParam(value ="roomTitle") String roomTitle, Model model) {
         List<Room> roomList = roomRepository.findByRoomTitleContainingIgnoreCase(roomTitle);
+        Collections.reverse(roomList);
         model.addAttribute("roomList", roomList);
         return "home";
     }
-
-
 }
